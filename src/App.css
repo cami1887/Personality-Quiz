@@ -1,0 +1,75 @@
+
+* {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: normal;
+  margin: auto;
+}
+
+h1 {
+text-align: center;
+font-size: 70px;
+font-weight: 500;
+letter-spacing: 2px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: 1px;
+}
+
+.sidebar {
+  top: 20px;
+  left: 20px;
+  width: 20%;
+  position: absolute;
+}
+
+.navlink-container {
+display: grid;
+grid-template-rows: 20%;
+gap: 50px;
+
+}
+
+.navlink {
+  text-decoration: none;
+}
+
+main {
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* .address-button {
+
+}
+
+.leaderboard {
+
+}
+
+.home-subtitle {
+
+}
+
+.start-quiz-button {
+
+} */
+
+
+
+button {
+display: block;
+background-color: rgb(170, 170, 224);
+color: white;
+font-size: 30px;
+height: 50px;
+width: 200px;
+border: none;
+border-radius: 50px;
+}
+
+footer {
+  bottom: 0;
+}
