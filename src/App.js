@@ -18,31 +18,21 @@ import Loserboard from './pages/worst-people.js';
 import TwelveSteps from './pages/twelve-steps';
 import Community from './pages/community.js'
 import MenuIcon from '@mui/icons-material/Menu';
-// import Sidebar from './pages/sidebar.js';
 import CloseIcon from '@mui/icons-material/Close';
-// import { Visibility } from '@mui/icons-material';
-const visible = {};
+
 
 export default function App() {
   const [clicked, showMenu] = useState(false);
-  let visibilityStatus = "hidden";
   function ToggleMenu() {
     showMenu(!clicked);
-    clicked ? visibilityStatus = "visible" : visibilityStatus = "hidden";
-    // console.log(visibilityStatus)
-    // return visibilityStatus;
-    visible.visibility = visibilityStatus;
-
-    console.log(visible?.visibility)
-   
   }
      
   return (
     <> 
     <BrowserRouter>
-    <MenuIcon className='menu-icon' onClick={ToggleMenu} />
-      <nav className="sidebar" style={visible}>
-        <CloseIcon className="close-icon" />
+    <MenuIcon className='menu-icon' onClick={ToggleMenu} style={{visibility: clicked ? 'hidden' : 'visible'}}/>
+      <nav className="sidebar" style={{visibility: clicked ? 'visible' : 'hidden'}}>
+        <CloseIcon className="close-icon" onClick={ToggleMenu}/>
         <div className="navlink-container" >  
           <NavLink className="navlink" to="/">Home</NavLink>
           <NavLink className="navlink" to="/loserboard">Top 10 Worst People (With Addresses)</NavLink>
