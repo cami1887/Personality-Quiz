@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function Questions() {
   const questions = [
@@ -15,43 +15,35 @@ export default function Questions() {
     answers: ["Obviously not. I'm not a dirty, dishonest person", "One time and never again", "Sometimes", "Every chance I get. Original thoughts don't reside in this noggin"]}
   ]
   const [index, updateQuestion] = useState(0);
+  const navigate = useNavigate();
 
   function updateState() {
+    
     if (index < questions.length) {
        updateQuestion(index + 1);
-       console.log(questions[index].answers)
     }
-    else {
-      <link to="/results"></link>
+    if (index === 4 ) {
+      updateQuestion(index - 4)
+      navigate("/results")
     }
   }
+ 
   return (
     <>  
-    <div key={index}>
+    <div key={Math.floor(Math.random()*10000)}>
       {questions[index].question}
       {questions[index].answers.map((answer) => (
           <button  onClick={updateState}>{answer}</button>    
       ))}
     </div>
-    {/* <div>
-      <input type="radio" name="question-one" value="one" id="1a"/>
-      <label for="1a">Maybe like 1</label>
-    </div>
-    <div>
-      <input type="radio" name="question-one" value="one" id="1b"/>
-      <label for="1b">No more than 10</label>
-    </div>
-    <div>
-      <input type="radio" name="question-one" value="one" id="1c"/>
-      <label for="1c">Hundreds maybe?</label>
-    </div>
-    <div>
-      <input type="radio" name="question-one" value="one" id="1d"/>
-      <label for="1d">It's gotta be in the thousands</label>
-    </div>
-    <Link to="/question2">
-            <button>Next</button>
-    </Link> */}
     </>
   );  
 }
+
+// function goToResults() {
+//   return (
+//     <div>
+//       <Link to="/results">Click for results</Link>
+//     </div>
+//   )
+// }
