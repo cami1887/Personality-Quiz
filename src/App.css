@@ -2,32 +2,57 @@
 * {
   font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: normal;
-  margin: auto;
+  text-decoration: none;
+ 
+}
+
+
+.homepage-image {
+width: 50%;
+margin-right: 0;
+margin-left: auto;
+}
+
+.homepage-content{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 h1 {
-text-align: center;
-font-size: 70px;
+text-align: left;
+font-size: 100px;
 font-weight: 500;
-letter-spacing: 2px;
+letter-spacing: 3px;
+
 }
 
 h2 {
+  /* margin-top: 5%; */
   text-align: center;
-  font-size: 40px;
+  font-size: 30px;
   letter-spacing: 1px;
 }
 
 .sidebar {
-  top: 20px;
-  left: 20px;
+  top: 0;
+  left: 0;
   width: 20%;
-  position: absolute;
+  position: fixed;
+  background-color: rgb(214, 214, 255);
+  border-radius: 0px 20px 20px 0px;
 }
 
 .navlink-container {
 display: grid;
-grid-template-rows: 20%;
+/* grid-template-rows: 15%; */
+text-align: center;
+width: 180px;
 gap: 50px;
 
 }
@@ -37,11 +62,15 @@ gap: 50px;
 }
 
 main {
-  margin-top: 30px;
-  text-align: center;
+  padding-top: 7%;
+  padding-left: 1%;
+  width: 80%;
+  align-items: center;
 }
 
-/* .address-button {
+
+
+.address-button {
 
 }
 
@@ -49,37 +78,43 @@ main {
 
 }
 
-.home-subtitle {
-
+.homepage-text-container {
+  display: flex;
+  justify-content:space-between;
+  padding-top: 7%;
+  padding-left: 1%;
+  width: 80%;
+  align-items: center;
+  text-shadow: 1px 1px 2px rgb(192, 206, 255);
 }
 
-.start-quiz-button {
-
-} */
-
-
+.homepage-subtitle {
+  padding-left: 1%;
+  text-align: left;
+  font-size: 30px;
+  letter-spacing: 1px;
+}
 
 button {
-display: block;
 background-color: rgb(170, 170, 224);
 color: white;
 font-size: 30px;
 /* height: 50px;
 width: 200px; */
 border: none;
-border-radius: 50px;
 }
 
 .start-quiz-button {
-  display: block;
-  background-color: rgb(170, 170, 224);
-  color: white;
-  font-size: 30px;
-  height: 50px;
-  width: 200px;
-  border: none;
-  border-radius: 50px;
-}
+margin-top: 50%;
+display: block;
+background-color: rgb(35, 151, 200);
+color: white;
+font-size: 30px;
+height: 50px;
+width: 200px;
+border: none;
+border-radius: 5px;
+} 
 
 footer {
   bottom: 0;

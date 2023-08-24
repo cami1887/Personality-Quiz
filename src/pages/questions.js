@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import {  } from 'react-router-dom';
 
 export default function Questions() {
   const questions = [
@@ -40,16 +39,16 @@ export default function Questions() {
     if (index === 4 ) {
       updateQuestion(index - 4)
       finishedQuiz = true;
+      console.log(finishedQuiz)
     }
-    
   }
   return (
     <>  
-    <p key={Math.floor(Math.random()*10000)}>Question {questions[index].number}</p>
-    <div key={Math.floor(Math.random()*10000)}>
+    <p>Question {questions[index].number}</p>
+    <div>
       {questions[index].question}
       {questions[index].answers.map((answer) => (
-          <button onClick={updateState}>{answer.answer}</button>    
+          <button key={Math.floor(Math.random()*10000)} onClick={updateState}>{answer.answer}</button>    
       ))}
     </div>
     </>
