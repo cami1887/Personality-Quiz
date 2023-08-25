@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from'react-router-dom';
 
 export default function Questions() {
   const questions = [
@@ -18,39 +19,41 @@ export default function Questions() {
     answers: [{answer:"Obviously not. I'm not a dirty, dishonest person", value: 0}, {answer:"One time and never again", value: 1}, {answer:"Sometimes", value: 2}, {answer:"Every chance I get. Original thoughts don't reside in this noggin", value: 3}],
     number: 5}
   ]
-  const [index, updateQuestion] = useState(0);
-  // const navigate = useNavigate();
+  const [question, setQuestion] = useState(0);
+  const navigate = useNavigate();
   let finishedQuiz = false;
-  // let score = 0;
   
-  //   useEffect(() => {
-  //   if (finishedQuiz) {
-  //     console.log('render')
-  //     navigate("/results");
-  //   }
-  // });
+  useEffect(() => {
+    if (finishedQuiz === true) {
+      navigate("/results");
+    }
+  }, [question]);
     
 
   function updateState() {
-    if (index < questions.length) {
-       updateQuestion(index + 1);
+    if (question < questions.length) {
+       setQuestion(question + 1);
        finishedQuiz = false;
     }
-    if (index === 4 ) {
-      updateQuestion(index - 4)
+    if (question === 4 ) {
+      setQuestion(question - 4)
       finishedQuiz = true;
-      console.log(finishedQuiz)
     }
   }
+
   return (
     <>  
-    <p>Question {questions[index].number}</p>
-    <div>
-      {questions[index].question}
-      {questions[index].answers.map((answer) => (
-          <button key={Math.floor(Math.random()*10000)} onClick={updateState}>{answer.answer}</button>    
-      ))}
-    </div>
+      <p>Question {questions[question].number}</p>
+      <div>
+        {questions[question].question}
+        {questions[question]?.answers?.length ? <ul> 
+        {questions[question].answers.map((answer) => (
+          <li>          
+            <button key={Math.floor(Math.random()*10000)} onClick={updateState}>{answer.answer}</button>    
+          </li>
+        ))} </ul> : <>ppee</>}
+        
+      </div>
     </>
   );  
 }
