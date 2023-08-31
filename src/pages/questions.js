@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
+// import ReactLoading from 'react-loading';
 import { useNavigate } from'react-router-dom';
+// import { NextPlan } from '@mui/icons-material';
 
 export default function Questions() {
   const questions = [
@@ -20,39 +22,56 @@ export default function Questions() {
     number: 5}
   ]
   const [question, setQuestion] = useState(0);
+  const [state, setState] = useState(false);
   const navigate = useNavigate();
-  let finishedQuiz = false;
-  
-  useEffect(() => {
-    if (finishedQuiz === true) {
-      navigate("/results");
-    }
-  }, [question]);
-    
 
   function updateState() {
-    if (question < questions.length) {
-       setQuestion(question + 1);
-       finishedQuiz = false;
+    if (question < questions?.length - 1 ) {
+      setQuestion(question + 1);
     }
-    if (question === 4 ) {
-      setQuestion(question - 4)
-      finishedQuiz = true;
+    if (question === questions?.length - 1) {
+      setQuestion(question+1);
+      loadingState();
     }
   }
 
+  function loadingState() {
+    if (question === questions?.length) {
+      setState(!state);
+    }
+  }
+
+//   function Load(props) { 
+//     return (
+//       useEffect(() => {
+//         if (props.status) {
+//           return (
+//           <ReactLoading type="bubbles" color="#0000FF" height={1000} width={500} />
+//           )
+//         }
+//       }
+//       ,[props.status])
+//     )
+// }
+
+  useEffect(() => {
+    if (question === 5 ) { 
+      setTimeout(() => navigate("/results"));
+      // setTimeout(() => navigate("/results"), 1000);
+    }
+  },[question]);
+
   return (
-    <>  
-      <p>Question {questions[question].number}</p>
+    <> 
+      {/* <Load className="loading-bubbles" status={state}/> */}
       <div>
-        {questions[question].question}
+        {questions[question]?.question}
         {questions[question]?.answers?.length ? <ul> 
-        {questions[question].answers.map((answer) => (
-          <li>          
+        {questions[question]?.answers.map((answer) => (
+          <li key={Math.floor(Math.random()*10000)}>          
             <button key={Math.floor(Math.random()*10000)} onClick={updateState}>{answer.answer}</button>    
           </li>
-        ))} </ul> : <>ppee</>}
-        
+        ))} </ul> : <></>} 
       </div>
     </>
   );  
