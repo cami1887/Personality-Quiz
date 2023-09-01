@@ -41,38 +41,22 @@ export default function Questions() {
     }
   }
 
-//   function Load(props) { 
-//     return (
-//       useEffect(() => {
-//         if (props.status) {
-//           return (
-//           <ReactLoading type="bubbles" color="#0000FF" height={1000} width={500} />
-//           )
-//         }
-//       }
-//       ,[props.status])
-//     )
-// }
-
   useEffect(() => {
     if (question === 5 ) { 
       setTimeout(() => navigate("/results"));
       // setTimeout(() => navigate("/results"), 1000);
     }
-  },[question]);
+  },[navigate, question]);
 
   return (
-    <> 
-      {/* <Load className="loading-bubbles" status={state}/> */}
-      <div>
-        {questions[question]?.question}
+      <div className='quiz-container'>
+        <p className="quiz-question">{questions[question]?.question}</p>
         {questions[question]?.answers?.length ? <ul> 
         {questions[question]?.answers.map((answer) => (
-          <li key={Math.floor(Math.random()*10000)}>          
-            <button key={Math.floor(Math.random()*10000)} onClick={updateState}>{answer.answer}</button>    
+          <li className="selection-container" key={Math.floor(Math.random()*10000)}>          
+            <button className="selection-button" key={Math.floor(Math.random()*10000)} onClick={updateState}>{answer.answer}</button>    
           </li>
         ))} </ul> : <></>} 
       </div>
-    </>
-  );  
+  )
 }

@@ -33,6 +33,10 @@ button {
   font-size: 30px;
 }
 
+span {
+  color: darkseagreen;
+}
+
 .homepage-content{
   bottom: 0;
   display: flex;
@@ -102,8 +106,42 @@ button {
   left: 0;  
   position: fixed;
   top: 0;
-  width: 15%;
+  width: 20%;
   z-index: 999;
+}
+
+.quiz-container {
+ align-items: center;
+ display: flex;
+ justify-content: center;
+ margin-top: 100px;
+ text-align: center;
+ vertical-align: middle;
+}
+
+.quiz-question {
+  font-size: 40px;
+  margin-top: 0px;
+  width: 500px;
+}
+
+.selection-container {
+ align-items: center;
+ list-style: none; 
+ vertical-align: middle;
+}
+
+.selection-button {
+  background-color: rgb(254, 207, 76);
+  border-radius: 15px;
+  margin: 5px;
+  padding: 5px 0px;
+  width: 550px;
+}
+
+.selection-button:hover {
+  background-color: white;
+  color: rgb(254, 207, 76);
 }
 
 .navlink-container {
@@ -115,4 +153,52 @@ button {
 
 .navlink {
   text-decoration: none;
+}
+
+.result-title {
+  font-size: 60px;
+  margin-top: 0px;
+  text-align: center;
+}
+
+.result-subtitle {
+  font-size: 30px;
+  text-align: center;
+}
+
+.result-description {
+  font-size: 20px;
+  margin:0 auto;
+  text-align: center;
+  width: 700px;
+  padding-bottom: 200px;
+}
+
+.twelve-steps-button {
+  position: fixed;
+  bottom: 5%;
+  left: 45%;
+  width: 160px;
+  height: 160px;
+  border-radius: 100px;
+  background-color: darkseagreen;
+  z-index: 2;
+}
+
+.twelve-steps-button:hover {
+  border: solid;
+  background-color: transparent;
+  color:darkseagreen;
+  border-color: darkseagreen;
+}
+
+.egg-white-two {
+  position: fixed;
+  background-color: rgb(255, 252, 250);
+  border-radius: 60% 80% 60% 60%;
+  bottom: 1%;
+  left: 35%;
+  height: 150px;
+  width: 450px;
+  z-index: 1;
 }

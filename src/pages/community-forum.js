@@ -26,7 +26,7 @@ export default function Forum() {
                     <button type="submit">Post</button>
                 </div>
                 <button onClick={showEmoji}>
-                    <img src="/images/clown.png" alt="image" />
+                    <img src="/images/clown.png" alt="clown" />
                 </button>
                 <div className="emoji-picker" style={{display: 'none'}}>
                     <EmojiPicker /> 
