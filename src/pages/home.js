@@ -4,15 +4,14 @@ export default function Home() {
     return (
         <div className="homepage-content">
             <main className="homepage-text-container">  
-                <div>
-                    <h1>Personality Quiz</h1>
-                    <h2 className="homepage-subtitle" >Find Out If You're A Bad Person Today!</h2>
-                </div>
+                    <h1>Do you absolutely SUCK?</h1>
                 <Link  to="/questions">
-                    <button className="start-quiz-button">Begin</button> 
+                    <button className="start-quiz-button">Find Out</button> 
                 </Link>
             </main>
-            <img className="homepage-image" src="/images/stick-figures.png" alt="stick figure people with devil horns"/>
+            
+            <img className="homepage-image" src="/images/cracked.jpg" alt="stick figure people with devil horns"/>
+            <div className="egg-white"></div>
         </div>
     )
 } 
