@@ -1,8 +1,12 @@
 export default function TwelveSteps() {
     return (
-    <main>
-    <ol>
-        12 steps to being a decent human person
+        <>
+        <main className="article">
+        <div className="article-header">
+            <h2 className="article-title">Be Born Again....</h2>
+            <img className="article-picture" src="/images/eggs.gif" alt="chick hatched from an egg" />
+        </div>
+        <ol className="article-items">
         <li> Show Up At Random People's Birthday Parties and Gift Them Handmade Food Items
             <p>Create a memory that will last a lifetime</p>
         </li>
@@ -40,6 +44,8 @@ export default function TwelveSteps() {
             <p>Singlehandedly fight high dropout rates!</p>
         </li>
     </ol>
+    
     </main>
+    </>
     );
   }

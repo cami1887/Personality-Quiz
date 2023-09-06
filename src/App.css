@@ -1,14 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lexend+Deca:wght@800&family=Work+Sans:ital,wght@1,500&display=swap');
 
+/* :root {
+  margin: 0;
+} */
+
 * {
   font-family: 'Lexend Deca', sans-serif;
   font-weight: normal;
   text-decoration: none;
   
 }
+/* html {
+  margin: 0;
+} */
 
 body {
   background-color: rgb(255, 237, 186);
+  margin: 0;
 }
 
 h1 {
@@ -20,11 +28,10 @@ h1 {
   text-align: left;
 }
 
-main {
+/* main {
   align-items: center;
-  padding-left: 1%;
-  width: 80%;
-}
+  margin: 0;
+} */
 
 button {
   background-color: rgb(170, 170, 224);
@@ -41,7 +48,7 @@ span {
   bottom: 0;
   display: flex;
   flex-direction: column;
-  left: 0;
+  left: 30px;
   position: absolute;
   right: 0;
   top: 0;
@@ -96,8 +103,10 @@ span {
 }
 
 .menu-icon {
-  position: relative;
-  z-index: 999;
+  top: 4px;
+  left: 4px;
+  position: fixed;
+  z-index: 998;
 }
 
 .sidebar {
@@ -193,12 +202,55 @@ span {
 }
 
 .egg-white-two {
-  position: fixed;
   background-color: rgb(255, 252, 250);
   border-radius: 60% 80% 60% 60%;
   bottom: 1%;
   left: 35%;
+  position: fixed;
   height: 150px;
   width: 450px;
   z-index: 1;
+}
+
+.article {
+  margin: 0 auto;
+  vertical-align: middle;
+  z-index: 1;
+}
+
+.article-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+  margin: 0;
+  vertical-align: middle;
+  z-index: 0;
+}
+
+.article-title {
+  font-size: 130px;
+  height: 100vh;
+  margin: 25% 0 ;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.article-picture {
+  height: 100vh;
+  object-fit: cover;
+  width: 100%;
+  z-index: 0;
+}
+
+.article-items {
+  margin: 0 auto;
+  width: 750px; 
+}
+
+.article-items li {
+font-size: 35px;
+}
+
+.article-items li p {
+  font-size: 24px;
 }
