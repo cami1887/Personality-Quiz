@@ -3,11 +3,19 @@ export default function TwelveSteps() {
         <>
         <main className="article">
         <div className="article-header">
-            <h2 className="article-title">Be Born Again....</h2>
+            <h2 className="article-title">Be Born Again</h2>
             <img className="article-picture" src="/images/eggs.gif" alt="chick hatched from an egg" />
         </div>
         <ol className="article-items">
-        <li> Show Up At Random People's Birthday Parties and Gift Them Handmade Food Items
+            <hr/>
+        <li className="article-subtitle">
+            <span>Not</span> sucking is possible &#40;though not likely&#41; with these 12 medium difficulty steps!
+        </li>
+        <div className="egg-carton-container">
+            <img className="egg-carton" src="/images/carton.png" alt="egg carton" />
+        </div>
+        {/* <hr/> */}
+        {/* <li> Show Up At Random People's Birthday Parties and Gift Them Handmade Food Items
             <p>Create a memory that will last a lifetime</p>
         </li>
         <li> Answer phone calls at other people places of work
@@ -42,7 +50,7 @@ export default function TwelveSteps() {
         </li>
         <li> Take academic courses for students
             <p>Singlehandedly fight high dropout rates!</p>
-        </li>
+        </li> */}
     </ol>
     
     </main>
