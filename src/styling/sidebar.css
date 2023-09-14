@@ -1,0 +1,27 @@
+.menu-icon {
+    left: 4px;
+    position: fixed;
+    top: 4px;
+    z-index: 998;
+}
+
+.sidebar {
+    background-color: rgb(255, 255, 255);
+    border-radius: 0px 20px 20px 0px;
+    left: 0;  
+    position: fixed;
+    top: 0;
+    width: 20%;
+    z-index: 999;
+}
+
+.navlink-container {
+    display: grid;
+    gap: 50px;
+    text-align: center;
+    width: 180px;
+}
+
+.navlink {
+    text-decoration: none;
+}

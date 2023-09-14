@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import '../styling/results.css';
 
 export default function Results() {
     return (

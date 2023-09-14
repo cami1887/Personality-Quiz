@@ -1,0 +1,33 @@
+.quiz-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.quiz-question {
+    font-size: 40px;
+    margin-top: 0px;
+    width: 500px;
+}
+
+.selection-container {
+    align-items: center;
+    list-style: none; 
+    vertical-align: middle;
+}
+
+.selection-button {
+    background-color: rgb(254, 207, 76);
+    border-radius: 15px;
+    margin: 5px;
+    padding: 5px 0px;
+    width: 550px;
+}
+
+.selection-button:hover {
+    background-color: white;
+    color: rgb(254, 207, 76);
+}

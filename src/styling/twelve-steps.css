@@ -1,0 +1,343 @@
+.article {
+    margin: 0;
+    vertical-align: middle;
+    z-index: 1;
+}
+
+.article-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    margin: 0;
+    vertical-align: middle;
+    z-index: 0;
+}
+
+.article-title {
+    color: black;
+    font-size: 130px;
+    height: 100vh;
+    margin: 25% 0 ;
+    text-align: center;
+    text-shadow: 40px -40px rgb(237, 211, 171);
+    vertical-align: middle;
+}
+
+.article-picture {
+    height: 100vh;
+    object-fit: cover;
+    width: 100%;
+    z-index: 0;
+}
+
+.egg-carton-container {
+    position: relative;
+    text-align: center;
+}
+
+.egg-carton {
+    margin: 0 auto;
+    width: 80%; 
+}
+
+.article-items {
+    list-style-type: none;
+    margin: 0 auto;
+}
+
+.article-items li {
+    padding: 20px 0;
+}
+
+.article-items li p {
+    font-size: 24px;
+}
+
+.article-items .article-subtitle {
+    background-color: rgb(255, 244, 214);
+    border-radius: 40px 40px 40px 40px;
+    box-shadow:  0px 12px 12px -12px rgba(0, 0, 0, 0.5);
+    font-size: 45px;
+    margin: 5% auto;
+    padding: 70px;
+    text-align: center;
+    vertical-align: middle;
+    width: 75%;
+}
+
+.article-subtitle span {
+    color:rgb(243, 198, 74);
+}
+
+.blank {
+    border-radius: 50% 50% 0 0;
+    left: 40%;
+    position: absolute;
+    width: 5%;
+    height: 4%;
+}
+
+.step {
+    border: solid 6px white;
+    border-radius: 0px 25px 25px 0px;
+    box-shadow: 1px 1px 5px #c9c9c9;
+    font-size: 24px;
+    opacity: 0;
+    padding: 2% 1%;
+    position: absolute;
+    transition: opacity 2000ms;
+    visibility: hidden;
+    width: 400px;
+    z-index: 3;
+}
+
+#image-one {
+    top: 8.5%;
+}
+
+#image-two {
+    height: 4.5%;
+    left: 39.5%;
+    top: 12.5%;
+    width: 5.5%;
+}
+
+#image-three {
+    height: 6%;
+    left: 37%;
+    top: 17.5%;
+    width: 7%
+}
+
+#image-four {
+    height: 7%;
+    left: 35%;
+    top: 23.5%;
+    width: 7.5%;
+}
+
+#image-five {
+    height: 8%;
+    left: 33%;
+    top: 31%;
+    width: 9%;
+}
+
+#image-six {
+    height: 28%;
+    left: 28%;
+    top: 39%;
+    width: 16.5%;
+}
+
+#image-seven {
+    left: 55%;
+    top: 8.5%;
+}
+
+#image-eight {
+    height: 4.5%;
+    left: 55%;
+    top: 12.5%;
+    width: 5.5%;
+}
+
+#image-nine {
+    height: 6%;
+    left: 55.5%;
+    top: 17.5%;
+    width: 7.5%;
+}
+
+#image-ten {
+    height: 6.5%;
+    left: 58%;
+    top: 24%;
+    width: 8%;
+}
+
+#image-eleven {
+    height: 8%;
+    left: 57%;
+    top: 31%;
+    width: 9%;
+}
+
+#image-twelve {
+    height: 28%;
+    left: 55%;
+    top: 39%;
+    width: 16.5%;
+}
+
+#step-one {
+    font-size: 18px;
+    left: 7%;
+    top: 8.5%;
+}
+
+#step-two {
+    font-size: 20px;
+    left: 6.5%;
+    top: 13%;
+}
+
+#step-three {
+    top: 19%;
+}
+
+#step-four {
+    top: 25%;
+}
+
+#step-five {
+    top: 34%;
+}
+
+#step-six {
+    top: 50%;
+}
+
+#step-seven {
+    border-radius: 25px 0px 0px 25px;
+    left: 70%;
+    top: 9%;
+}
+
+#step-eight {
+    border-radius: 25px 0px 0px 25px;
+    left: 70%;
+    top: 13%;
+}
+
+#step-nine {
+    border-radius: 25px 0px 0px 25px;
+    left: 70%;
+    top: 19%;
+}
+
+#step-ten {
+    border-radius: 25px 0px 0px 25px;
+    left: 70%;
+    top: 25%;
+}
+
+#step-eleven {
+    border-radius: 25px 0px 0px 25px;
+    left: 70%;
+    top: 34%;   
+}
+
+#step-twelve {
+    border-radius: 25px 0px 0px 25px;
+    left: 70%;
+    top: 50%;
+}
+
+#image-one:hover {
+    cursor: pointer;
+
+    ~ #step-one{
+    opacity: 100;
+    visibility: visible;
+    }
+}
+
+#image-two:hover {
+    cursor: pointer;
+
+    ~ #step-two{
+    opacity: 100;
+    visibility: visible;
+    }
+}
+
+#image-three:hover {
+    cursor: pointer;
+
+    ~ #step-three{
+    opacity: 100;
+    visibility: visible;
+    }
+}
+
+#image-four:hover {
+    cursor: pointer;
+
+    ~ #step-four{
+    opacity: 100;
+    visibility: visible;
+    }
+}
+
+#image-five:hover {
+    cursor: pointer;
+
+    ~ #step-five{
+    opacity: 100;
+    visibility: visible;
+    }
+}
+
+#image-six:hover {
+    cursor: pointer;
+
+    ~ #step-six{
+    opacity: 100;
+    visibility: visible;
+    }
+}
+
+#image-seven:hover {
+    cursor: pointer;
+
+    ~ #step-seven{
+    opacity: 100;
+    visibility: visible;
+    }
+}
+
+#image-eight:hover {
+    cursor: pointer;
+
+    ~ #step-eight{
+    opacity: 100;
+    visibility: visible;
+    }
+}
+
+#image-nine:hover {
+    cursor: pointer;
+
+    ~ #step-nine{
+    opacity: 100;
+    visibility: visible;
+    }
+}
+
+#image-ten:hover {
+    cursor: pointer;
+
+    ~ #step-ten{
+    opacity: 100;
+    visibility: visible;
+    }
+}
+
+#image-eleven:hover {
+    cursor: pointer;
+
+    ~ #step-eleven{
+    opacity: 100;
+    visibility: visible;
+    }
+}
+
+#image-twelve:hover {
+    cursor: pointer;
+
+    ~ #step-twelve{
+    opacity: 100;
+    visibility: visible;
+    }
+}

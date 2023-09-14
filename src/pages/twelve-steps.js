@@ -1,3 +1,5 @@
+import '../styling/twelve-steps.css';
+
 export default function TwelveSteps() {
     return (
         <>
@@ -6,54 +8,42 @@ export default function TwelveSteps() {
             <h2 className="article-title">Be Born Again</h2>
             <img className="article-picture" src="/images/eggs.gif" alt="chick hatched from an egg" />
         </div>
-        <ol className="article-items">
-            <hr/>
-        <li className="article-subtitle">
+        <div className="article-items">
+        <hr/>
+        <p className="article-subtitle">
             <span>Not</span> sucking is possible &#40;though not likely&#41; with these 12 medium difficulty steps!
-        </li>
-        <div className="egg-carton-container">
-            <img className="egg-carton" src="/images/carton.png" alt="egg carton" />
-        </div>
-        {/* <hr/> */}
-        {/* <li> Show Up At Random People's Birthday Parties and Gift Them Handmade Food Items
-            <p>Create a memory that will last a lifetime</p>
-        </li>
-        <li> Answer phone calls at other people places of work
-            <p>No one wants to deal with customers, so lend a hand!</p>
-        </li>
-        <li> eave the lowest rated car dealerships 5 start ratings
-            <p>Businesses are people too</p>
-        </li>
-        <li> clean the machines others are using at the gym in between their sets
-            <p>Stop the spread of disease at the source</p>
-        </li>
-        <li> fold other peoples laundry at the laundromat
-            <p>Everyone deserves nicely folded linens</p>
-        </li>
-        <li> give your landlord extra rent
-            <p>What better way to say thank you to the person who so graciously houses you</p>
-        </li>
-        <li> Leave food along hiking trails 
-            <p>How many chipmunks have lived never knowing the savory embrace of a cheeseburger? You see my point</p>
-        </li>
-        <li> break in shoes at shoe stores
-            <p>Dont just stand idle letting people walk around with blisters from new shoes</p>
-        </li>
-        <li> Join aa groups to lend a listening ear
-            <p>Good people dont let others struggle in solitude</p>
-        </li>
-        <li> Open a free clinic in your community regardless of experience
-            <p>Any care is better than no care</p>
-        </li>
-        <li> Remove speed limit signs in highly congested areas
-            <p>Faster driving = faster traffic = more smiles</p>
-        </li>
-        <li> Take academic courses for students
-            <p>Singlehandedly fight high dropout rates!</p>
-        </li> */}
-    </ol>
-    
+        </p>
+        <div className="egg-carton-container">                    
+                <img className="egg-carton" src="/images/carton.png" alt="egg carton"/>
+                    <img id="image-one" className="blank" src="/images/blank.png" alt="hover for first step" />
+                    <div id="step-one" className="step"> Answer phone calls at other people places of work </div>
+                    <img id="image-two" className="blank" src="/images/blank.png" alt="hover for second step" />
+                    <div id="step-two" className="step" > Show Up At Random People's Birthday Parties and Gift Them Handmade Food Items </div>
+                    <img id="image-three" className="blank" src="/images/blank.png" alt="hover for third step" />
+                    <div id="step-three" className="step"> Leave the lowest rated car dealerships 5 start ratings </div>
+                    <img id="image-four" className="blank" src="/images/blank.png" alt="hover for fourth step" />
+                    <div id="step-four" className="step"> Clean the machines others are using at the gym in between their sets </div>
+                    <img id="image-five" className="blank" src="/images/blank.png" alt="hover for fifth step" />
+                    <div id="step-five" className="step"> Fold other peoples laundry at the laundromat </div>
+                    <img id="image-six" className="blank" src="/images/blank.png" alt="hover for sixth step" />
+                    <div id="step-six" className="step"> Gift your landlord extra rent</div>
+                    <img id="image-seven" className="blank" src="/images/blank.png" alt="hover for seventh step" />
+                    <div id="step-seven" className="step"> Leave food along hiking trails </div>
+                    <img id="image-eight" className="blank" src="/images/blank.png" alt="hover for eighth step" />
+                    <div id="step-eight" className="step"> Break in alll the shoes at the shoe store</div>
+                    <img id="image-nine" className="blank" src="/images/blank.png" alt="hover for ninth step" />
+                    <div id="step-nine" className="step">Join AA groups to lend give advice</div>
+                    <img id="image-ten" className="blank" src="/images/blank.png" alt="hover for tenth step" />
+                    <div id="step-ten" className="step"> Open a free clinic in your community regardless of experience</div>
+                    <img id="image-eleven" className="blank" src="/images/blank.png" alt="hover for eleventh step" />
+                    <div id="step-eleven" className="step">Remove speed limit signs in highly congested areas</div>
+                    <img id="image-twelve" className="blank" src="/images/blank.png" alt="hover for twelfth step" />
+                    <div id="step-twelve" className="step"> Take academic courses for students </div>
+            </div>
+    </div>
     </main>
+    
+    
     </>
     );
   }

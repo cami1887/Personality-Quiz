@@ -1,3 +1,4 @@
+import '../styling/home.css';
 import { Link } from 'react-router-dom';
 
 export default function Home() {
@@ -10,7 +11,7 @@ export default function Home() {
                 </Link>
             </main>
             
-            <img className="homepage-image" src="/images/cracked.jpg" alt="stick figure people with devil horns"/>
+            <img className="homepage-image" src="./images/cracked.jpg" alt="stick figure people with devil horns"/>
             <div className="egg-white"></div>
         </div>
     )
