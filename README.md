@@ -1,6 +1,8 @@
 # Personality Quiz
 This is a simple personality quiz website which functions to find out if you're a good person or not. It was made to showcase my newly acquired React skills.
 
+![2F92D944-911E-4624-83BE-BCD93A2F5CC1](https://github.com/cami1887/react-router-website/assets/116380828/94b97fb4-df8e-42f2-ad55-9148f330d3d8)
+
 ## Technology Used
 - JavaScript
 - HTML
