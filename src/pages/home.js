@@ -10,7 +10,6 @@ export default function Home() {
                     <button className="start-quiz-button">Find Out</button> 
                 </Link>
             </main>
-            
             <img className="homepage-image" src="./images/cracked.jpg" alt="stick figure people with devil horns"/>
             <div className="egg-white"></div>
         </div>

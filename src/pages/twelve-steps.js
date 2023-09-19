@@ -1,4 +1,5 @@
 import '../styling/twelve-steps.css';
+import { Link } from 'react-router-dom';
 
 export default function TwelveSteps() {
     return (
@@ -8,7 +9,6 @@ export default function TwelveSteps() {
             <h2 className="article-title">Be Born Again</h2>
             <img className="article-picture" src="/images/eggs.gif" alt="chick hatched from an egg" />
         </div>
-        <div className="article-items">
         <hr/>
         <p className="article-subtitle">
             <span>Not</span> sucking is possible &#40;though not likely&#41; with these 12 medium difficulty steps!
@@ -40,6 +40,15 @@ export default function TwelveSteps() {
                     <img id="image-twelve" className="blank" src="/images/blank.png" alt="hover for twelfth step" />
                     <div id="step-twelve" className="step"> Take academic courses for students </div>
             </div>
+            <hr className="last-break" />
+            <div className='community-link-container'>
+                <p className="community-description">Want To Talk To Other Morally Questionable People For Some Reason?</p>
+                <div className="button-container">
+                    <Link to="/forum">
+                        <button className="community-button">Click Here</button>
+                    </Link>
+                    <div className="egg-white-three"></div>
+                </div>
     </div>
     </main>
     

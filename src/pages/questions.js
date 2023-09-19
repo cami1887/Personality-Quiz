@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import ReactLoading from 'react-loading';
 import { useNavigate } from'react-router-dom';
 import '../styling/questions.css';
@@ -21,15 +21,17 @@ const questions = [
   number: 5}
 ]
 
-export default function Questions() {
+export let result = 0;
+export const storedResult = parseInt(sessionStorage.getItem("finalResult"));
+export function Questions() {
   const [question, setQuestion] = useState(0);
   const [loading, setLoading] = useState(false);
+  const [points, setPoints] = useState(0);
   const navigate = useNavigate();
 
-  function updateState() {
+  function updateQuestion() {
     if (question < questions?.length - 1 ) {
       setQuestion(question + 1);
-      console.log(question)
     }
     else {
       const previousQuestion = question;
@@ -38,14 +40,35 @@ export default function Questions() {
     }
   }
 
-  useEffect(() => {
-    if (loading) {
-      setTimeout(() => navigate("/results"), 1000);
-    }
-  },
-  [loading, navigate]
-  );
+  function updatePoints(e) {
+     const currentPoint = e.currentTarget.getAttribute("points");
+     setPoints(points + Number(currentPoint));
+   }
 
+  useEffect(() => {
+    
+    if (loading) {
+      if (points <= 5) {
+        console.log(points)
+        result = 0;
+      }
+      if (points > 5 && points < 10) {
+        console.log(points)
+        result = 1;
+      }
+      if (points > 10) {
+        console.log(points)
+        result = 2;
+      }
+      sessionStorage.setItem("finalResult", result);
+      setTimeout(() => {
+        navigate("/result"); 
+      }, 1000);
+      
+    }
+  }, [loading, navigate, points]);
+
+  console.log(points)
   return (
     <div className='quiz-container'>
       <>{loading ? 
@@ -57,8 +80,8 @@ export default function Questions() {
       <p className="quiz-question">{questions[question]?.question}</p>
       {questions[question]?.answers?.length ? 
         <ul> {questions[question]?.answers.map((answer) => (
-          <li className="selection-container" key={Math.floor(Math.random()*10000)}>          
-            <button className="selection-button" key={Math.floor(Math.random()*10000)} onClick={updateState}>{answer.answer}</button>    
+          <li className="selection-container" key={Math.floor(Math.random()*10000)} onClick={updateQuestion} >          
+            <button className="selection-button" key={Math.floor(Math.random()*10000)} points={answer?.value} onClick={updatePoints}>{answer?.answer}</button>    
           </li>
           ))} 
         </ul> : <></>} 
