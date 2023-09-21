@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 import '../styling/results.css';
 import { result, storedResult }from './questions.js';
 
@@ -63,7 +63,7 @@ const resultContent = [
     Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`
   },
   {
-    title: "This is literally the worst possible score you could have gotten",
+    title: "LOL... this is literally the worst possible score you could have gotten",
     subtitle: "you're bad and you smell and nobody likes you 3",
     description: 
     `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -94,13 +94,14 @@ const resultContent = [
 ]
 
 export default function Results() {
- 
-
+  console.log(sessionStorage.getItem('result'))
+  const previous = sessionStorage.getItem("result");
+  console.log(parseInt(previous));
   return (
     <>
       <h2 className="result-title" >{resultContent[result].title}</h2>
       <p className='result-subtitle'>
-          {resultContent[result].subtitle}
+        {resultContent[result].subtitle}
       </p>
       <p className='result-description'>
         {resultContent[result].description}
@@ -112,3 +113,6 @@ export default function Results() {
     </>
   );
 }
+
+// sessionStorage.setItem("result", result);
+

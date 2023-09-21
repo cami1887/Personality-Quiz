@@ -1,6 +1,7 @@
 .result-title {
     font-size: 60px;
     margin-top: 0px;
+    padding: 1% 5%;
     text-align: center;
   }
   
@@ -12,37 +13,36 @@
   .result-description {
     font-size: 20px;
     margin:0 auto;
+    padding-bottom: 200px;
     text-align: center;
     width: 700px;
-    padding-bottom: 200px;
   }
   
   .twelve-steps-button {
-    position: fixed;
-    bottom: 5%;
-    left: 45%;
-    width: 160px;
-    height: 160px;
-    border-radius: 100px;
     background-color: darkseagreen;
+    border-radius: 100px;
+    bottom: 5%;
+    height: 160px;
+    left: 45%;
+    position: fixed;
+    width: 160px;
     z-index: 2;
   }
   
   .twelve-steps-button:hover {
-    border: solid;
     background-color: transparent;
-    color:darkseagreen;
+    border: solid;
     border-color: darkseagreen;
+    color:darkseagreen;
   }
   
   .egg-white-two {
     background-color: rgb(255, 252, 250);
     border-radius: 60% 80% 60% 60%;
     bottom: 1%;
+    height: 150px;
     left: 35%;
     position: fixed;
-    height: 150px;
     width: 450px;
     z-index: 1;
-    /* margin: 0 32%; */
   }

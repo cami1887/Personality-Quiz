@@ -30,7 +30,7 @@ export default function TwelveSteps() {
                     <img id="image-seven" className="blank" src="/images/blank.png" alt="hover for seventh step" />
                     <div id="step-seven" className="step"> Leave food along hiking trails </div>
                     <img id="image-eight" className="blank" src="/images/blank.png" alt="hover for eighth step" />
-                    <div id="step-eight" className="step"> Break in alll the shoes at the shoe store</div>
+                    <div id="step-eight" className="step"> Break in all the shoes at the shoe store</div>
                     <img id="image-nine" className="blank" src="/images/blank.png" alt="hover for ninth step" />
                     <div id="step-nine" className="step">Join AA groups to lend give advice</div>
                     <img id="image-ten" className="blank" src="/images/blank.png" alt="hover for tenth step" />

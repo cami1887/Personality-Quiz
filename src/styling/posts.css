@@ -1,0 +1,42 @@
+.all-user-posts {
+    padding: 70px 0px;
+    width: 50%;
+}
+
+.post-container {
+    align-items: end;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 50px 80%;
+    margin: 20px 20px;
+}
+
+.user-container {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 5px;
+}
+
+.user-name {
+    margin: 0 auto 0px 0px;
+}
+
+.user-picture {
+    background-color: white;
+    border-radius: 100px;
+    height: 30px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.post-contents {
+    background-color: white;
+    border-radius: 20px 20px 20px 0;
+    margin: 0 0 5px;
+    padding: 10px;
+    width: 100%;
+}
+
+

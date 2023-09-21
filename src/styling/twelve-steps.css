@@ -58,11 +58,10 @@
 
 .blank {
     border-radius: 50% 50% 0 0;
-    /* border: solid 1px black; */
+    height: 4%;
     left: 40%;
     position: absolute;
     width: 5%;
-    height: 4%;
     z-index: 5;
 }
 
@@ -365,35 +364,35 @@
 }
 
 .button-container {
-    position: relative;
     padding-bottom: 20px;
+    position: relative;
 }
 
 .community-button {
-    height: 140px;
-    width: 140px;
-    position: absolute;
-    border-radius: 100px;
-    left: 43%;
-    color: white;
     background-color: rgb(255, 205, 68);
+    border-radius: 100px;
+    color: white;
+    height: 140px;
+    left: 43%;
+    position: absolute;
     text-align: center;
+    width: 140px;
     z-index: 2;
 }
 
-.community-button:hover {
+.community-button:hover {    
+    background-color: transparent;
     border: solid 1px rgb(255, 205, 68);
     color: rgb(255, 205, 68);
-    background-color: transparent;
 }
 
 .egg-white-three {
     background-color: rgb(255, 252, 250);
     border-radius: 60% 80% 60% 60%;
-    top: 100%;
+    height: 120px;
     left: 30%;
     position: absolute;
-    height: 120px;
+    top: 100%;
     width: 450px;
     z-index: 1;
 }

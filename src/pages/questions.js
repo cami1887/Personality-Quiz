@@ -2,6 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import ReactLoading from 'react-loading';
 import { useNavigate } from'react-router-dom';
 import '../styling/questions.css';
+import { score } from './results';
 
 const questions = [
   {question: "Do you think you suck?",
@@ -22,6 +23,8 @@ const questions = [
 ]
 
 export let result = 0;
+
+
 export const storedResult = parseInt(sessionStorage.getItem("finalResult"));
 export function Questions() {
   const [question, setQuestion] = useState(0);
@@ -46,7 +49,6 @@ export function Questions() {
    }
 
   useEffect(() => {
-    
     if (loading) {
       if (points <= 5) {
         console.log(points)
@@ -88,3 +90,5 @@ export function Questions() {
     </div>
     ) 
   }
+
+// score ? result = score : result = 0;
