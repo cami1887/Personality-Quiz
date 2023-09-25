@@ -10,7 +10,7 @@ export default function Posts() {
         {username: 'PPpoopp', post: 'hi evryone'}
     ]
 
-                    return (
+    return (
         <div className="all-user-posts" >{posts.map((post)=> 
             <div className="post-container" key={Math.floor(Math.random()*10000)}>
                 <img className="user-picture" src="/images/egg-slice.png" alt="user" />
