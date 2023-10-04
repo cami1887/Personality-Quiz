@@ -1,6 +1,14 @@
 .all-user-posts {
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    overflow-y: scroll;
     padding: 70px 0px;
-    width: 50%;
+    width: 100%;
+    
+}
+.all-user-posts::-webkit-scrollbar {
+    display: none;
 }
 
 .post-container {
@@ -8,7 +16,18 @@
     display: grid;
     gap: 20px;
     grid-template-columns: 50px 80%;
-    margin: 20px 20px;
+    margin: 0px 20px 10px;
+    width: 50%;
+}
+
+/* .user-message-container {
+    right: 0;
+    border: solid 1px red;
+} */
+
+.sent-container {
+    height: 50px;
+    background-color: aqua;
 }
 
 .user-container {
