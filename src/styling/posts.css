@@ -4,30 +4,64 @@
     height: 80vh;
     overflow-y: scroll;
     padding: 70px 0px;
-    width: 100%;
-    
+    /* width: 100%; */
 }
 .all-user-posts::-webkit-scrollbar {
     display: none;
 }
 
-.post-container {
+.received-container {
     align-items: end;
+    animation: slowAppear .5s;
+    animation-fill-mode: forwards;
     display: grid;
     gap: 20px;
-    grid-template-columns: 50px 80%;
+    grid-template-columns: 50px auto;
     margin: 0px 20px 10px;
-    width: 50%;
+    opacity: 0;
+    width: 40%;
 }
 
-/* .user-message-container {
-    right: 0;
-    border: solid 1px red;
-} */
-
 .sent-container {
-    height: 50px;
-    background-color: aqua;
+    align-items: end;
+    align-self: flex-end;
+    animation: slowAppear .5s;
+    animation-fill-mode: forwards;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: auto 50px;
+    margin: 0px 20px 10px;
+    opacity: 0;
+    width: 40%;
+}
+
+.sent-contents {
+    background-color: white;
+    border-radius: 20px 20px 0px 20px;
+    margin: 0 0 5px;
+    padding: 10px;
+    width: 100%;
+}
+
+.your-user-container {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 5px;
+}
+
+.your-user-name {
+    margin: 0 0px 0px auto;
+}
+
+@keyframes slowAppear {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
 }
 
 .user-container {

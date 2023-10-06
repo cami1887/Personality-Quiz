@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactLoading from 'react-loading';
 import { useNavigate } from'react-router-dom';
 import '../styling/questions.css';
-import { score } from './results';
+// import { score } from './results';
 
 const questions = [
   {question: "Do you think you suck?",

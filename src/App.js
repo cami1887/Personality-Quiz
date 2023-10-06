@@ -6,7 +6,7 @@ import Error from './pages/error.js';
 import Results from './pages/results.js';
 import Loserboard from './pages/worst-people.js';
 import TwelveSteps from './pages/twelve-steps';
-import Forum from './pages/community-forum.js';
+import Forum from './pages/community.js';
 import Sidebar from './pages/sidebar.js';
 
 export default function App() {

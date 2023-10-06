@@ -8,21 +8,17 @@ import '../styling/community.css';
 
 export default function Forum() {
     const statusBarRef = useRef(null);
-    // const [text, setText] = useState('');
-    let text  = '';
+    const [text, setText] = useState('');
 
     function addEmoji(props) { 
         let stuff = statusBarRef.current.value;
-        // setText(stuff + props.emoji);
-        text = stuff + props.emoji;
-        statusBarRef.current.setAttribute('value', text);
-        console.log(statusBarRef.current)
+        setText(stuff + props.emoji);
     }
 
-    // function changeText() {
-    //     let stuff = statusBarRef.current.value;
-    //     setText(stuff);
-    // }
+    function changeText() {
+        let stuff = statusBarRef.current.value;
+        setText(stuff);
+    }
 
     function showEmoji() {
         if (document.querySelector('.emoji-picker').style.display === 'none') {
@@ -35,13 +31,12 @@ export default function Forum() {
 
     function saveMessage() {
         let input = statusBarRef.current.value;
+        
         if (input) {
             posts.sent.push(text);
-            // setText('');
+            setText('');
         }
     }
-
-    //onChange={changeText} value={text}
 
     return (
         <>
@@ -54,10 +49,9 @@ export default function Forum() {
             </header>
             
             <Posts />
-            {/* <Messages />  add attribute text that toggle when message is sent*/}
-
+            
             <div className="status-container">
-                <input type="text" ref={statusBarRef}  placeholder='Post Something'/>
+                <input type="text" onChange={changeText} value={text}  ref={statusBarRef} placeholder='Post Something'/>
                 <button onClick={saveMessage}>
                     <img src="/images/send.png" alt="send" />
                 </button>

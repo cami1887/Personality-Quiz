@@ -10,6 +10,7 @@ header {
     position: fixed;
     margin: 0 auto;
     width: 100%;
+    z-index: 997;
 }
 
 header h1 {
@@ -51,7 +52,6 @@ input {
     height: 35px;
     padding-left: 10px;
     width: 50%;
-    
 }
 
 button {
