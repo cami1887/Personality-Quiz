@@ -4,8 +4,6 @@ import { Posts } from './posts.js';
 import { posts } from '../data/post-data.js';
 import '../styling/community.css';
 
-// rerenderng of entire websitre whenver inpt is changed
-
 export default function Forum() {
     const statusBarRef = useRef(null);
     const [text, setText] = useState('');
@@ -43,8 +41,8 @@ export default function Forum() {
             <header>
                 <h1>Community</h1> 
                 <div className='title-two'>
-                    <h1>Forum</h1>
-                    <h2>It's kind of like therapy, <br/>if your therapist sucked </h2> 
+                    <h1>Chat</h1>
+                    <h2>For The Immoral, <br/>...by The Immoral </h2> 
                 </div>
             </header>
             

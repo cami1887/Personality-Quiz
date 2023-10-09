@@ -1,10 +1,15 @@
+body::-webkit-scrollbar {
+    display: none;
+}
+
 .all-user-posts {
     display: flex;
     flex-direction: column;
     height: 80vh;
     overflow-y: scroll;
+    /* overflow-x: auto; */
     padding: 70px 0px;
-    /* width: 100%; */
+    width: 100%;
 }
 .all-user-posts::-webkit-scrollbar {
     display: none;
@@ -16,7 +21,7 @@
     animation-fill-mode: forwards;
     display: grid;
     gap: 20px;
-    grid-template-columns: 50px auto;
+    grid-template-columns: 50px 35vw;
     margin: 0px 20px 10px;
     opacity: 0;
     width: 40%;
@@ -25,14 +30,14 @@
 .sent-container {
     align-items: end;
     align-self: flex-end;
+    float: right;
     animation: slowAppear .5s;
     animation-fill-mode: forwards;
     display: grid;
     gap: 20px;
-    grid-template-columns: auto 50px;
-    margin: 0px 20px 10px;
+    grid-template-columns: 35vw 50px;
+    margin: 0px 20px 20px 10px;
     opacity: 0;
-    width: 40%;
 }
 
 .sent-contents {
@@ -41,11 +46,14 @@
     margin: 0 0 5px;
     padding: 10px;
     width: 100%;
+    word-wrap: break-word;
 }
 
 .your-user-container {
     align-items: flex-start;
     display: flex;
+    /* flex-wrap: wrap; */
+    
     flex-direction: column;
     margin: 10px;
     padding: 5px;
