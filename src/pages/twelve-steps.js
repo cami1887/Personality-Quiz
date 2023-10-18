@@ -6,12 +6,12 @@ export default function TwelveSteps() {
         <>
         <main className="article">
         <div className="article-header">
-            <h2 className="article-title">Be Born Again</h2>
+            <h2 className="article-title">BE BORN EGGAIN</h2>
             <img className="article-picture" src="/images/eggs.gif" alt="chick hatched from an egg" />
         </div>
         <hr/>
         <p className="article-subtitle">
-            <span>Not</span> sucking is possible &#40;though not likely&#41; with these 12 medium difficulty steps!
+            <span>NOT</span> sucking is possible &#40;though not likely&#41; with these 12 over-easy steps!
         </p>
         <div className="egg-carton-container">                    
                 <img className="egg-carton" src="/images/carton.png" alt="egg carton"/>
@@ -42,7 +42,7 @@ export default function TwelveSteps() {
             </div>
             <hr className="last-break" />
             <div className='community-link-container'>
-                <p className="community-description">Want To Talk To Other Morally Questionable People For Some Reason?</p>
+                <p className="community-description">Want To Talk To Other Deviled Eggs For Some Reason?</p>
                 <div className="button-container">
                     <Link to="/forum">
                         <button className="community-button">Click Here</button>

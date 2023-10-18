@@ -39,10 +39,10 @@ export default function Forum() {
     return (
         <>
             <header>
-                <h1>Community</h1> 
+                <h1>COMMUNITY </h1> 
                 <div className='title-two'>
-                    <h1>Chat</h1>
-                    <h2>For The Immoral, <br/>...by The Immoral </h2> 
+                    <h1> CHAT</h1>
+                    <h2>For Scrambled Brains, <br/>...By Scrambled Brains </h2> 
                 </div>
             </header>
             

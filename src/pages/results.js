@@ -5,8 +5,8 @@ import { result, storedResult }from './questions.js';
 
 const resultContent = [
   {
-    title: "Yeah you most definitely SUCK",
-    subtitle: "you're bad and you smell and nobody likes you 1",
+    title: "Uhhh yeah you most definitely SUCK",
+    subtitle: "(you're bad and you smell and nobody likes you)",
     description: 
     `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
@@ -35,7 +35,7 @@ const resultContent = [
   },
   {
     title: "You're an absolutely HORRIBLE DISGUSTING person",
-    subtitle: "you're bad and you smell and nobody likes you 2",
+    subtitle: "(you're bad and you smell and nobody likes you)",
     description: 
     `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
@@ -64,7 +64,7 @@ const resultContent = [
   },
   {
     title: "LOL... this is literally the worst possible score you could have gotten",
-    subtitle: "you're bad and you smell and nobody likes you 3",
+    subtitle: "(you're bad and you smell and nobody likes you)",
     description: 
     `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
@@ -98,7 +98,7 @@ export default function Results() {
   const previous = sessionStorage.getItem("result");
   console.log(parseInt(previous));
   return (
-    <>
+    <div className="result-container">
       <h2 className="result-title" >{resultContent[result].title}</h2>
       <p className='result-subtitle'>
         {resultContent[result].subtitle}
@@ -109,8 +109,8 @@ export default function Results() {
       <Link to="/twelve-steps">
         <button className="twelve-steps-button">How To Not Suck</button>
       </Link>
-      <div className="egg-white-two"> </div>
-    </>
+      <div className="egg-white-two"></div>
+    </div>
   );
 }
 

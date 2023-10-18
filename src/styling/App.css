@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lexend+Deca:wght@800&family=Work+Sans:ital,wght@1,500&display=swap');
 
+@font-face {
+  font-family: eggFont;
+  src: url(/public/images/SenseEggDisplay-6YpX6.ttf);
+}
+
+@font-face {
+  font-family: subtitle;
+  src: url(/public/images/FunGroovy-1GB12.ttf);
+}
 * {
   font-family: 'Lexend Deca', sans-serif;
   font-weight: normal;
@@ -29,27 +38,6 @@ button {
 
 span {
   color: darkseagreen;
-}
-
-#loading-container { 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: auto;
-  position: absolute;
-  text-align: center;
-  top: 20%;
-}
-
-#loading-container p {
-  color: rgb(254, 207, 76);
-  font-size: 42px;
-}
-
-#loading-bubbles {
-  height: 100%;
-  margin: auto;
-  text-align: center;
 }
 
 li {

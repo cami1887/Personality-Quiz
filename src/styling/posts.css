@@ -1,18 +1,10 @@
-body::-webkit-scrollbar {
-    display: none;
-}
-
 .all-user-posts {
     display: flex;
     flex-direction: column;
     height: 80vh;
     overflow-y: scroll;
-    /* overflow-x: auto; */
     padding: 70px 0px;
     width: 100%;
-}
-.all-user-posts::-webkit-scrollbar {
-    display: none;
 }
 
 .received-container {
@@ -30,10 +22,10 @@ body::-webkit-scrollbar {
 .sent-container {
     align-items: end;
     align-self: flex-end;
-    float: right;
     animation: slowAppear .5s;
     animation-fill-mode: forwards;
     display: grid;
+    float: right;
     gap: 20px;
     grid-template-columns: 35vw 50px;
     margin: 0px 20px 20px 10px;
@@ -52,24 +44,17 @@ body::-webkit-scrollbar {
 .your-user-container {
     align-items: flex-start;
     display: flex;
-    /* flex-wrap: wrap; */
-    
     flex-direction: column;
     margin: 10px;
     padding: 5px;
 }
 
-.your-user-name {
-    margin: 0 0px 0px auto;
+.your-user-container p {
+    font-family: subtitle;
 }
 
-@keyframes slowAppear {
-    from {
-        opacity: 0%;
-    }
-    to {
-        opacity: 100%;
-    }
+.your-user-name {
+    margin: 0 0px 0px auto;
 }
 
 .user-container {
@@ -78,6 +63,9 @@ body::-webkit-scrollbar {
     flex-direction: column;
     margin: 10px;
     padding: 5px;
+}
+.user-container p {
+    font-family: subtitle;
 }
 
 .user-name {
@@ -100,4 +88,19 @@ body::-webkit-scrollbar {
     width: 100%;
 }
 
+.all-user-posts::-webkit-scrollbar {
+    display: none;
+}
 
+@keyframes slowAppear {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}

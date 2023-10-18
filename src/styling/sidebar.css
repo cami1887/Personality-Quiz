@@ -48,8 +48,11 @@
 }
 
 .navlink {
-    color: rgb(255, 205, 68);
-    font-size: 30px;
+    /* color: rgb(255, 205, 68); */
+    color: rgb(0, 0, 0);
+    font-family: subtitle;
+    font-size: 40px;
+    letter-spacing: 0;
     text-decoration: none;
     z-index: 999;
 }

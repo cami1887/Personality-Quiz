@@ -1,31 +1,50 @@
+.result-container {
+  background-color: rgba(255, 255, 255, 0.543);
+  border: dotted 2px darkseagreen;
+  margin: 50px auto 170px;
+  padding-top: 40px;
+  border-radius: 400px 400px 150px 150px;
+  width: 75vw;
+}
+
 .result-title {
-    font-size: 60px;
-    margin-top: 0px;
+  color: darkseagreen;
+  -webkit-text-stroke: 2px black;
+    font-family: eggFont;
+    font-size: 70px;
+    margin: 5% auto 2%;
     padding: 1% 5%;
     text-align: center;
   }
   
   .result-subtitle {
+    font-family: eggFont;
+    color: rgb(129, 168, 129);
+    margin: 0px auto 3%;
     font-size: 30px;
     text-align: center;
   }
   
   .result-description {
+    /* background-color: rgb(255, 252, 250); */
+    /* background-color: rgb(255, 190, 91); */
+    
+    font-family: subtitle;
     font-size: 20px;
-    margin:0 auto;
-    padding-bottom: 200px;
+    margin: 0 50px 50px;
     text-align: center;
-    width: 700px;
   }
   
   .twelve-steps-button {
     background-color: darkseagreen;
     border-radius: 100px;
     bottom: 5%;
-    height: 160px;
+    font-family: subtitle;
+    font-size: 24px;
+    height: 120px;
     left: 45%;
     position: fixed;
-    width: 160px;
+    width: 120px;
     z-index: 2;
   }
   
@@ -39,10 +58,13 @@
   .egg-white-two {
     background-color: rgb(255, 252, 250);
     border-radius: 60% 80% 60% 60%;
-    bottom: 1%;
-    height: 150px;
-    left: 35%;
+    top: 70%;
+    height: 130px;
+    /* left: 37%; */
     position: fixed;
-    width: 450px;
+    /* margin: 0px auto; */
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 350px;
     z-index: 1;
   }

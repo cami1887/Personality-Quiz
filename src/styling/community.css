@@ -15,14 +15,11 @@ header {
 
 header h1 {
     color: rgb(255, 205, 68);
+    font-family: eggFont;
     font-size: 52px;
     margin: 0;
     width: 350px;
 
-}
-.title-two h2 {
-    font-size: 12px;
-    margin: 10px 0 0 10px;
 }
 
 .title-two {
@@ -33,6 +30,12 @@ header h1 {
 
 .title-two h1 {
     width: auto;
+}
+
+.title-two h2 {
+    font-family: subtitle;
+    font-size: 12px;
+    margin: 10px 0 0 10px;
 }
 
 .status-container {
@@ -49,6 +52,7 @@ header h1 {
 input {
     border: solid 1px orange;
     border-radius: 100px;
+    font-family: subtitle;
     height: 35px;
     padding-left: 10px;
     width: 50%;

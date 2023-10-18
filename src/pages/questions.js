@@ -5,8 +5,8 @@ import '../styling/questions.css';
 // import { score } from './results';
 
 const questions = [
-  {question: "Do you think you suck?",
-  answers: [{answer:"No", value: 0}, {answer:"Not Usually", value: 1}, {answer:"Sometimes", value:2}, {answer:"Yes", value:3}],
+  {question: "Do you think YOU suck?",
+  answers: [{answer:"No!", value: 0}, {answer:"Not Usually?", value: 1}, {answer:"Sometimes :'(", value:2}, {answer:"Honestly. . . yes", value:3}],
   number: 1},
   {question: "Do you ever find yourself doing embarassing things?",
   answers: [{answer:"No Way", value: 0} , {answer: "Maybe once when I was a grimy little kid", value: 1} , {answer:"Yes", value: 2}, {answer:"All the time. I'm one clumsy fool", value: 3}],
@@ -75,8 +75,8 @@ export function Questions() {
     <div className='quiz-container'>
       <>{loading ? 
         <div id="loading-container">
-          <p>Calculating Results...</p> 
-          <ReactLoading id="loading-bubbles" type={"spinningBubbles"} color={"white"} width={'60%'}/>
+          <p>CALCULATING RESULTS...</p> 
+          <ReactLoading id="loading-bubbles" type={"spinningBubbles"} color={"white"} width={'30%'}/>
         </div> : null}
       </>
       <p className="quiz-question">{questions[question]?.question}</p>
