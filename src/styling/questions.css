@@ -1,10 +1,19 @@
 .quiz-container {
     align-items: center;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    
     margin: auto 0px;
+    justify-content: center;
     text-align: center;
     height: 100vh;
+}
+
+.animate-quiz {
+    animation: quizAppear 1s;
+    animation-fill-mode: forwards;
+
+    opacity: 0;
 }
 
 .quiz-question {
@@ -22,7 +31,6 @@
 
 .selection-button {
     background-color: white;
-    /* border: dashed 4px rgb(255, 255, 255); */
     color: black;
     border-radius: 15px;
     font-family: subtitle;
@@ -43,6 +51,7 @@
     margin: auto;
     position: absolute;
     text-align: center;
+    width: 100%;
     top: 10%;
   }
   
@@ -56,4 +65,15 @@
     height: 100%;
     margin: auto;
     text-align: center;
+  }
+
+  @keyframes quizAppear {
+    0% {
+        opacity: 0;
+        gap: 100vw;
+    }
+    100% {
+        gap: 0;
+        opacity: 100%;
+    }
   }

@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import EmojiPicker from 'emoji-picker-react';
 import { Posts } from './posts.js';
 import { posts } from '../data/post-data.js';
+import Eggy from './eggman.js';
 import '../styling/community.css';
 
 export default function Forum() {
@@ -39,15 +40,10 @@ export default function Forum() {
     return (
         <>
             <header>
-                <h1>COMMUNITY </h1> 
-                <div className='title-two'>
-                    <h1> CHAT</h1>
-                    <h2>For Scrambled Brains, <br/>...By Scrambled Brains </h2> 
-                </div>
+                <h1><span className='title-two'>CHICKEN</span>COOP</h1> 
             </header>
-            
             <Posts />
-            
+            <Eggy style={{padding: '20px'}} position="top-right-chat" message="I'm egghausted. Maybe these other guys can babysit you instead. I'll be meditating until we move on. Ohhhhhhhhhhhmlet"/>
             <div className="status-container">
                 <input type="text" onChange={changeText} value={text}  ref={statusBarRef} placeholder='Post Something'/>
                 <button onClick={saveMessage}>

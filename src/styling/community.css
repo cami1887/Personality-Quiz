@@ -1,12 +1,7 @@
 header {
-    align-items:center;
     background-color: cornsilk;
     border-radius: 0 0 15px 15px;
     box-shadow: 0px 1px 10px 0px rgb(158, 158, 158);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0px 20px 5px;
     position: fixed;
     margin: 0 auto;
     width: 100%;
@@ -14,28 +9,17 @@ header {
 }
 
 header h1 {
-    color: rgb(255, 205, 68);
+    text-align: center;
+     color: black;
     font-family: eggFont;
     font-size: 52px;
     margin: 0;
-    width: 350px;
-
 }
 
 .title-two {
-    align-items: center;
-    display: flex;
-    width: 350px;
-}
-
-.title-two h1 {
-    width: auto;
-}
-
-.title-two h2 {
-    font-family: subtitle;
-    font-size: 12px;
-    margin: 10px 0 0 10px;
+   color: rgb(255, 205, 68);
+    font-family: eggFont;
+    font-size: 52px;
 }
 
 .status-container {

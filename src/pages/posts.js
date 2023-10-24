@@ -15,18 +15,17 @@ export function Posts() {
     const [count, setCount] = useState(1); //count used for mapping each received post one slice at a time
     const allPostsRef = useRef(null); //references container of all posts
     let sentLength = posts?.sent.length; //length of sent post array
-    
-    //posts your message by creating new child and appending to last child of post container
+
     function postUserMessage() {
         let parent = allPostsRef?.current;
         const child = document.createElement("div");
         child.classList.add("sent-container");
         child.innerHTML = `
-                <div class="your-user-container">
-                    <p class="your-user-name">urabadperson</p>
-                    <p class="sent-contents">${posts?.sent[posts?.sent.length-1]}</p>  
-                </div>
-                <img class="user-picture" src="/images/egg-slice.png" alt="user" />`;
+            <div class="your-user-container">
+                <p class="your-user-name">urabadperson</p>
+                <p class="sent-contents">${posts?.sent[posts?.sent.length-1]}</p>  
+            </div>
+            <img class="user-picture" src="/images/egg-slice.png" alt="user" />`;
         parent.appendChild(child);
         posts?.sent?.pop();
         autoScroll();  
@@ -73,7 +72,6 @@ export function Posts() {
 
     return (
         <div className="all-user-posts" ref={allPostsRef}>
-            {/* {postingMessages} */}
         </div>
     )
 }

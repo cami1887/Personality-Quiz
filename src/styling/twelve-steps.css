@@ -405,3 +405,15 @@
 .last-break {
     box-shadow: inset 0 -12px 12px -12px rgba(0, 0, 0, 0.5);
 }
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}

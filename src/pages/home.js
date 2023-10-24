@@ -5,7 +5,7 @@ import Eggy from './eggman';
 export default function Home() {
     return (
         <div className="homepage-content">
-            <Eggy message="Hi! My name is Eggy and I was just born. Were you?" positionX='50%' positionY='50%'/>
+            <Eggy position="top" message="Hi! My name is Eggy and I'm sooo egg-cited to meet you <3 I was born yesterday and in case you were too, I'll be here to help"/>
             <main className="homepage-text-container">  
                     <h1>DO YOU ABSOLUTELY SUCK?</h1>
                 <Link to="/questions">
