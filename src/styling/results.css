@@ -1,10 +1,25 @@
 .result-container {
+  animation: resultAppear .75s .24s;
+  animation-fill-mode: forwards;
   background-color: rgba(255, 255, 255, 0.543);
   border: dotted 2px darkseagreen;
   margin: 50px auto 170px;
+  opacity: 0;
   padding-top: 40px;
-  border-radius: 400px 400px 150px 150px;
+  border-radius: 150px 150px 150px 150px;
   width: 75vw;
+}
+
+@keyframes resultAppear {
+  from {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .result-title {
@@ -26,9 +41,6 @@
   }
   
   .result-description {
-    /* background-color: rgb(255, 252, 250); */
-    /* background-color: rgb(255, 190, 91); */
-    
     font-family: subtitle;
     font-size: 20px;
     margin: 0 50px 50px;
@@ -36,15 +48,19 @@
   }
   
   .twelve-steps-button {
+    animation: buttonAppear .5s;
+    animation-fill-mode: forwards;
     background-color: darkseagreen;
     border-radius: 100px;
     bottom: 5%;
+    margin-bottom: 1%;
     font-family: subtitle;
-    font-size: 24px;
-    height: 120px;
-    left: 45%;
+    font-size: 20px;
+    height: 15vh;
+    left: 46%;
+    opacity: 0;
     position: fixed;
-    width: 120px;
+    width: 15vh;
     z-index: 2;
   }
   
@@ -56,15 +72,26 @@
   }
   
   .egg-white-two {
+    animation: buttonAppear .5s;
+    animation-fill-mode: forwards;
     background-color: rgb(255, 252, 250);
     border-radius: 60% 80% 60% 60%;
-    top: 70%;
-    height: 130px;
-    /* left: 37%; */
+    bottom: 10%;
+    height: 100px;
+    opacity: 0;
     position: fixed;
-    /* margin: 0px auto; */
-    left: 50%;
-    transform: translate(-50%, 50%);
-    width: 350px;
+    left: 40%;
+    width: 20%;
     z-index: 1;
   }
+
+@keyframes buttonAppear {
+  from {
+    opacity: 0;
+    bottom: -5%;
+  }
+  to {
+    opacity: 1;
+    bottom: 5%;
+  }
+}

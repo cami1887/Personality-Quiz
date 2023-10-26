@@ -5,7 +5,7 @@ export default function Eggy(props) {
     let position = props.position;
     return (
             <div className={position}>
-                <img className="eggy-picture" src="/images/eggy.png" alt="eggy"/>
+                <img className="eggy-picture" src="/images/eggy-two.png" alt="eggy"/>
                 <p className="eggy-message">{message}</p>
             </div> 
     )

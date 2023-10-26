@@ -40,10 +40,10 @@ export default function Forum() {
     return (
         <>
             <header>
-                <h1><span className='title-two'>CHICKEN</span>COOP</h1> 
+                <h1><span className='title-two'>EGGY</span>COMMUNE</h1> 
             </header>
             <Posts />
-            <Eggy style={{padding: '20px'}} position="top-right-chat" message="I'm egghausted. Maybe these other guys can babysit you instead. I'll be meditating until we move on. Ohhhhhhhhhhhmlet"/>
+            <Eggy style={{padding: '20px'}} position="top-right-chat" message="I'm egghausted. Maybe these other guys can babysit you instead. I'll be meditating until we move on.... ohhhhhhhhhhhmlet"/>
             <div className="status-container">
                 <input type="text" onChange={changeText} value={text}  ref={statusBarRef} placeholder='Post Something'/>
                 <button onClick={saveMessage}>

@@ -16,7 +16,10 @@ export function Questions() {
   const [name, setName] = useState('animate-quiz')
   const navigate = useNavigate();
 
-  function updateQuestion() {
+  function updatePoints(e) {
+    const currentPoint = e.currentTarget.getAttribute("points");
+    setPoints(points + Number(currentPoint));
+
     if (question < questions?.length - 1 ) {
       setQuestion(question + 1);
       if (question === 0) {
@@ -41,11 +44,6 @@ export function Questions() {
       setLoading(true);
       setQuestion(previousQuestion+1);
     }
-  }
-
-  function updatePoints(e) {
-    const currentPoint = e.currentTarget.getAttribute("points");
-    setPoints(points + Number(currentPoint));
    }
 
   useEffect(() => {
@@ -79,13 +77,15 @@ export function Questions() {
         <Eggy position={position} message={questions[question]?.eggyResponse} />}
       </>
       <div className='quiz-container'>
-        <p className="quiz-question">{questions[question]?.question}</p>
         {questions[question]?.answers?.length ? 
-          <ul> {questions[question]?.answers.map((answer) => (
-            <li className="selection-container" key={Math.floor(Math.random()*10000)} onClick={updateQuestion} >          
+        <>
+          <p className="quiz-question">{questions[question]?.question}</p>
+          <ul>{questions[question]?.answers.map((answer) => (
+            <li className="selection-container" key={Math.floor(Math.random()*10000)} >          
               <button className="selection-button" key={Math.floor(Math.random()*10000)} points={answer?.value} onClick={updatePoints}>{answer?.answer}</button>    
             </li>))} 
-          </ul> : <></>} 
+          </ul>
+        </> : <></>}
       </div>
     </>
     ) 
