@@ -14,9 +14,13 @@ export default function Forum() {
         setText(stuff + props.emoji);
     }
 
-    function changeText() {
+    function changeText(e) {
         let stuff = statusBarRef.current.value;
         setText(stuff);
+        console.log(e.key)
+        if (stuff && (e.key === 'enter')) {
+            saveMessage();
+        }
     }
 
     function showEmoji() {
@@ -37,6 +41,12 @@ export default function Forum() {
         }
     }
 
+    function pressedEnter(e) {
+        if (e.key === 'Enter') {
+            saveMessage();
+        }
+    }
+
     return (
         <>
             <header>
@@ -45,7 +55,7 @@ export default function Forum() {
             <Posts />
             <Eggy style={{padding: '20px'}} position="top-right-chat" message="I'm egghausted. Maybe these other guys can babysit you instead. I'll be meditating until we move on.... ohhhhhhhhhhhmlet"/>
             <div className="status-container">
-                <input type="text" onChange={changeText} value={text}  ref={statusBarRef} placeholder='Post Something'/>
+                <input type="text" onChange={changeText} onKeyDown={pressedEnter} value={text}  ref={statusBarRef} placeholder='Post Something'/>
                 <button onClick={saveMessage}>
                     <img src="/images/send.png" alt="send" />
                 </button>

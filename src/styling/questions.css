@@ -17,6 +17,13 @@
     width: 45vw;
 }
 
+button {
+    background-color: rgb(170, 170, 224);
+    border: none;
+    color: white;
+    font-size: 30px;
+  }
+
 .selection-container {
     align-items: center; 
     animation: showAnswers .75s;
@@ -25,24 +32,6 @@
     margin-left: 15vw;
     vertical-align: middle;
     width: 40vw;
-}
-
-@keyframes showQuestions {
-    from {
-        margin-right: 15vw;
-    }
-    to {
-        margin-right: 0;
-    }
-}
-
-@keyframes showAnswers {
-    from {
-        margin-left: 15vw;
-    }
-    to {
-        margin-left: 0;
-    }
 }
 
 .selection-button {
@@ -81,4 +70,22 @@
     height: 100%;
     margin: auto;
     text-align: center;
+}
+
+@keyframes showQuestions {
+    from {
+        margin-right: 15vw;
+    }
+    to {
+        margin-right: 0;
+    }
+}
+
+@keyframes showAnswers {
+    from {
+        margin-left: 15vw;
+    }
+    to {
+        margin-left: 0;
+    }
 }

@@ -24,34 +24,34 @@ h1 {
   font-size: 100px;
   font-weight: 500;
   letter-spacing: 3px;
-  margin-top: 23%;
   margin-bottom: 0;
+  margin-top: 23%;
   text-align: left;
 }
 
-button {
+/* button {
   background-color: rgb(170, 170, 224);
   border: none;
   color: white;
   font-size: 30px;
-}
+} */
 
-span {
+/* span {
   color: darkseagreen;
-}
+} */
 
-li {
+/* li {
   font-size: 35px;
-}
+} */
 
-ol {
+/* ol {
   padding: 0;
-}
+} */
 
-hr {
+/* hr {
   border: 0;
   box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
   height: 12px;
   margin: 0;
   padding: 0;
-}
+} */

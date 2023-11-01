@@ -5,39 +5,38 @@ import '../styling/questions.css';
 import Eggy from './eggman';
 import { questions } from '../data/question-data';
 
-export let result = 0;
-export const storedResult = parseInt(sessionStorage.getItem("finalResult"));
 
 export function Questions() {
   const [question, setQuestion] = useState(0);
   const [loading, setLoading] = useState(false);
   const [points, setPoints] = useState(0);
   const [position, setPosition] = useState('bottom-left');
-  const [name, setName] = useState('animate-quiz')
+  // const [name, setName] = useState('animate-quiz')
   const navigate = useNavigate();
+  let result = 0;
 
+  // updates points, positions eggy, 
   function updatePoints(e) {
     const currentPoint = e.currentTarget.getAttribute("points");
     setPoints(points + Number(currentPoint));
-
+    // setName(name);
     if (question < questions?.length - 1 ) {
-      setQuestion(question + 1);
-      if (question === 0) {
+      if ((question === 0)  || (question === 4) || (question === 8)){
         setPosition('bottom-right')
-        setName(name);
+        // setName(name);
       }
-      if (question === 1) {
+      if ((question === 1) || (question === 5) || (question === 9)) {
         setPosition('top');
-        setName('animate-quiz');
+        // setName('animate-quiz');
       }
-      if (question === 2) {
+      if (question === 2 || (question === 6)) {
         setPosition('bottom');
-        setName('animate-quiz');
+        // setName('animate-quiz');
       }
-      if (question === 3) {
+      if (question === 3 || (question === 7) ) {
         setPosition('bottom-left');
-        setName('animate-quiz');
-      }
+        // setName('animate-quiz');
+      }setQuestion(question + 1);
     }
     else {
       const previousQuestion = question;
@@ -48,15 +47,15 @@ export function Questions() {
 
   useEffect(() => {
     if (loading) {
-      if (points <= 5) {
+      if (points <= 10) {
         console.log(points)
         result = 0;
       }
-      if (points > 5 && points < 10) {
+      if (points > 10 && points <=  20) {
         console.log(points)
         result = 1;
       }
-      if (points > 10) {
+      if (points > 20) {
         console.log(points)
         result = 2;
       }

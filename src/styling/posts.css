@@ -22,7 +22,7 @@
 .sent-container {
     align-items: end;
     align-self: flex-end;
-    animation: slowAppear .5s;
+    animation: slowAppear .75s;
     animation-fill-mode: forwards;
     display: grid;
     float: right;

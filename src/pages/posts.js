@@ -12,7 +12,7 @@ function autoScroll() {
 
 //all sent and received posts
 export function Posts() {
-    const [count, setCount] = useState(1); //count used for mapping each received post one slice at a time
+    const [count, setCount] = useState(0); //count used for mapping each received post one slice at a time
     const allPostsRef = useRef(null); //references container of all posts
     let sentLength = posts?.sent.length; //length of sent post array
 
@@ -45,22 +45,21 @@ export function Posts() {
             if ((count <= posts?.recieved?.length)) {
                 setCount(count => count+ 1);
             }
-        }, 1200);
+        }, 1500);
         return () => clearInterval(interval); 
     }, [count]);
 
-    // let postingMessages = 
         useMemo(() => {  
             posts?.recieved?.slice(count-1, count).map((post)=> {
-            console.log("posting replies");
-            let parent = allPostsRef?.current;
+            console.log(post);
+            let parent = allPostsRef.current;
             const child = document.createElement("div");
             child.classList.add("received-container");
             child.innerHTML = `
                 <img class="user-picture" src="/images/egg-slice.png" alt="user" />
                 <div class="user-container">
-                    <p class="user-name">${post.username}</p>  
-                    <p class="post-contents">${post.post}</p>
+                    <p class="user-name">${post?.username}</p>  
+                    <p class="post-contents">${post?.post}</p>
                 </div>`;
             parent?.appendChild(child)
             autoScroll(); 
