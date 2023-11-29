@@ -2,95 +2,83 @@
   animation: resultAppear .75s .24s;
   animation-fill-mode: forwards;
   background-color: rgba(255, 255, 255, 0.543);
-  border: dotted 2px darkseagreen;
-  margin: 50px auto 170px;
+  border: dotted .2vw darkseagreen;
+  margin: 5vh auto 17vh;
   opacity: 0;
-  padding-top: 40px;
-  border-radius: 150px 150px 150px 150px;
+  padding-top: 4vh;
+  border-radius: 12vw;
   width: 75vw;
-}
-
-@keyframes resultAppear {
-  from {
-    position: relative;
-    transform: translateY(150px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 
 .result-title {
   color: darkseagreen;
-  -webkit-text-stroke: 2px black;
-    font-family: eggFont;
-    font-size: 70px;
-    margin: 5% auto 2%;
-    padding: 1% 5%;
-    text-align: center;
-  }
+  -webkit-text-stroke: .1vw black;
+  font-family: eggFont;
+  font-size: 5vw;
+  margin: 5% auto 2%;
+  padding: 1% 5%;
+  text-align: center;
+}
   
-  .result-subtitle {
-    font-family: eggFont;
-    color: rgb(129, 168, 129);
-    margin: 0px auto 3%;
-    font-size: 30px;
-    text-align: center;
-  }
+.result-subtitle {
+  font-family: eggFont;
+  color: rgb(129, 168, 129);
+  margin: 0 auto 3%;
+  font-size: 2.25vw;
+  text-align: center;
+}
   
-  .result-description {
-    font-family: subtitle;
-    font-size: 20px;
-    text-align: center;
-    margin: 0 auto;
-    text-align: center;
-    width: 60vw;
-  }
+.result-description {
+  font-family: subtitle;
+  font-size: 1.5vw;
+  text-align: center;
+  margin: 0 auto;
+  text-align: center;
+  width: 60vw;
+}
 
-  .lyrics {
-    white-space: pre-wrap;
-    margin: 20px auto 50px;
-  }
-  
-  .twelve-steps-button {
-    animation: buttonAppear .5s;
-    animation-fill-mode: forwards;
-    background-color: darkseagreen;
-    border-radius: 100px;
-    bottom: 5%;
-    margin-bottom: 1%;
-    font-family: subtitle;
-    font-size: 20px;
-    height: 15vh;
-    left: 46%;
-    opacity: 0;
-    position: fixed;
-    width: 15vh;
-    z-index: 2;
-  }
-  
-  .twelve-steps-button:hover {
-    background-color: transparent;
-    border: solid;
-    border-color: darkseagreen;
-    color:darkseagreen;
-  }
-  
-  .egg-white-two {
-    animation: buttonAppear .5s;
-    animation-fill-mode: forwards;
-    background-color: rgb(255, 252, 250);
-    border-radius: 60% 80% 60% 60%;
-    bottom: 10%;
-    height: 100px;
-    opacity: 0;
-    position: fixed;
-    left: 40%;
-    width: 20%;
-    z-index: 1;
-  }
+.lyrics {
+  white-space: pre-wrap;
+  margin: 20px auto 50px;
+}
+
+.twelve-steps-button {
+  animation: buttonAppear .5s;
+  animation-fill-mode: forwards;
+  background-color: darkseagreen;
+  border-radius: 100vw;
+  bottom: 5%;
+  margin-bottom: 1%;
+  font-family: subtitle;
+  font-size: 1.5vw;
+  height: 8vw;
+  left: 46vw;
+  opacity: 0;
+  position: fixed;
+  width: 8vw;
+  z-index: 2;
+}
+
+.twelve-steps-button:hover {
+  background-color: transparent;
+  border: solid;
+  border-color: darkseagreen;
+  color:darkseagreen;
+}
+
+.egg-white-two {
+  animation: buttonAppear .5s;
+  animation-fill-mode: forwards;
+  background-color: rgb(255, 252, 250);
+  border-radius: 60% 80% 60% 60%;
+  bottom: 10%;
+  height: 8vw;
+  opacity: 0;
+  position: fixed;
+  left: 39vw;
+  width: 22vw;
+  z-index: 1;
+}
 
 @keyframes buttonAppear {
   from {
@@ -100,5 +88,52 @@
   to {
     opacity: 1;
     bottom: 5%;
+  }
+}
+
+@keyframes resultAppear {
+  from {
+    position: relative;
+    transform: translateY(15vw);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  
+  .result-title {
+    font-size: 8vw;
+  }
+
+  .result-container {
+    margin: 10vh auto;
+    width: 90vw;
+  }
+  
+  .twelve-steps-button {
+    font-size: 3vw;
+    height: 14vw;
+    left: 45vw;
+    width: 14vw;
+  }
+  
+  .egg-white-two {
+    bottom: 10%;
+    height: 12vw;
+    width: 35vw;
+    left: 35vw;
+  }
+
+  .result-subtitle {
+    font-size: 6vw;
+  }
+    
+  .result-description {
+    font-size: 4vw;
+    width: 80vw;
   }
 }

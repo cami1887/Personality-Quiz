@@ -1,20 +1,24 @@
-import '../styling/twelve-steps.css';
+import '../styling/dozen-steps.css';
 import { Link } from 'react-router-dom';
 import { useRef, useState } from 'react';
-import Eggy from './eggman.js';
+import Eggy from './eggy.js';
 
 export default function TwelveSteps() {
   const subtitleRef = useRef(null);
   const linkRef = useRef(null);
+  const breakRef = useRef(null);
   const cartonRef = useRef(null);
   const [subtitleShow, setSubtitleShow] = useState(false);
   const [linkShow, setLinkShow] = useState(false);
   const [cartonShow, setCartonShow] = useState(false);
+  const [breakShow, setBreakShow] = useState(false);
 
+  //once user scrolls to a certain innerheight based on a calculated value, a state is set that will queue an animation by adding a class
   function reveal() {
     let windowHeight = window.innerHeight;
     let elementTop;
     let elementVisible= 150;
+  
     if (subtitleRef.current) {
       elementTop = subtitleRef.current.getBoundingClientRect().top;
       if (elementTop < windowHeight-elementVisible) {
@@ -25,6 +29,7 @@ export default function TwelveSteps() {
       elementTop = cartonRef.current.getBoundingClientRect().top;
       if (elementTop < windowHeight-elementVisible) {
         setCartonShow(true);
+        setBreakShow(true);
       }
     }
     if (linkRef.current) {
@@ -42,7 +47,7 @@ export default function TwelveSteps() {
       <main className="article">
       <div className="article-header">
           <h2 className="article-title">BE BORN EGGAIN</h2>
-          <img className="article-picture" src="/images/eggs.gif" alt="egg cracking" />
+          <img className="article-picture" src="/images/born-eggain.gif" alt="egg man exiting hatched egg" />
       </div>
       <hr/>
       <>
@@ -60,7 +65,7 @@ export default function TwelveSteps() {
                   <img id="image-three" className="blank" src="/images/blank.png" alt="hover for third step" />
                   <div id="step-three" className="step"> Leave the lowest rated car dealerships 5 start ratings </div>
                   <img id="image-four" className="blank" src="/images/blank.png" alt="hover for fourth step" />
-                  <div id="step-four" className="step"> Clean the machines others are using at the gym in between each rep </div>
+                  <div id="step-four" className="step"> Wipe down people's machines at the gym between each rep </div>
                   <img id="image-five" className="blank" src="/images/blank.png" alt="hover for fifth step" />
                   <div id="step-five" className="step"> Fold other people's laundry at the laundromat </div>
                   <img id="image-six" className="blank" src="/images/blank.png" alt="hover for sixth step" />
@@ -78,11 +83,11 @@ export default function TwelveSteps() {
                   <img id="image-twelve" className="blank" src="/images/blank.png" alt="hover for twelfth step" />
                   <div id="step-twelve" className="step">Give your neighbor a suprise HGTV-style makeover</div>
           </div>
-          <hr className="last-break" />
+          <hr className={`last-break reveal${ breakShow ? ' active' : '' }`} ref={breakRef}/>
           <div ref={linkRef} className={ `community-link-container last-reveal${ linkShow ? ' active' : '' }` }>
               <p className="community-description">Want To Talk To Other Deviled Eggs For Some Reason?</p>
               <div className="button-container">
-                  <Link to="/forum">
+                  <Link to="/community-chat">
                       <button className="community-button">Click Here</button>
                   </Link>
                   <div className="egg-white-three"></div>

@@ -5,42 +5,42 @@
     z-index: 998;
 }
 
+.sidebar {
+    background-size: cover;
+    height: 40vh;
+    position: fixed;
+    right: 100%; 
+    top: 0;
+    visibility: hidden;
+    width: 28vw;
+    z-index: 999;
+}
+
 .sidebar-background {
     background: linear-gradient(90deg, rgb(255, 237, 186) 0%, rgb(255, 237, 186) 40%, rgba(255, 237, 186, 0.941) 85%, rgba(255, 237, 186,0) 100%);    height: 100%;
     position: fixed;
+    right: 100%;
     top: 0;
     transition: right .7s;
-    right: 100%;
-    width: 620px;
-}
-
-.sidebar {
-    background-size: cover;
-    height: 330px;
-    right: 100%; 
-    position: fixed;
-    top: 0;
-    width: 340px;
-    visibility: hidden;
-    z-index: 999;
+    width: 55vw;
 }
 
 .fried-egg {
     background-size: cover;
-    height: 330px;
-    right: 100%; 
+    height: 25vw;
     position: fixed;
+    right: 100%; 
     top: 0;
     transition: right .6s ease-out;
-    width: 340px;
+    width: 25vw;
 }
 
 .navlink-container {
     display: grid;
-    gap: 30px;
-    padding: 10% 5% 0 0%;
+    gap: 3vw;
     margin-left: 10px;
     opacity: 0;
+    padding: 10% 5% 0 0%;
     text-align: left;
     transition: padding .5s, opacity .6s;
     visibility: hidden;
@@ -48,10 +48,9 @@
 }
 
 .navlink {
-    /* color: rgb(255, 205, 68); */
     color: rgb(0, 0, 0);
     font-family: subtitle;
-    font-size: 40px;
+    font-size: 2.6vw;
     letter-spacing: 0;
     text-decoration: none;
     z-index: 999;
@@ -64,12 +63,12 @@
     }
 
     ~ .sidebar .navlink-container {
-        padding-left: 100%;
         opacity: 100%;
+        padding-left: 100%;
     }
 
     ~ .sidebar .sidebar-background {
-        right: 65%;
+        right: 55vw;
     }
 }
 
@@ -83,20 +82,31 @@
     }
     
     .navlink-container {
-        padding-left: 100%;
         opacity: 100%;
+        padding-left: 100%;
         visibility: visible;
     }
 
     .sidebar-background {
-        right: 65%;
+        right: 55vw;
     }
 }
 
 .sidebar:not(:hover) {
     visibility: visible;
     .navlink-container {
-        padding-left: 0%;
         opacity: 100%;
+        padding-left: 0%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navlink {
+       font-size: 20px; 
+    }
+    
+    .menu-icon {
+        height: 5vw;
+        top: 1%;
     }
 }

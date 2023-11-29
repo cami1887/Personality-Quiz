@@ -1,100 +1,86 @@
-.top {
+.eggy {
     align-items: center;
-    animation: moveDown .75s .75s;
-    animation-fill-mode: forwards;
-    display: flex;
-    position: fixed;
-    opacity: 0;
-    right: 35vw;
-    top: -10vh;
-    z-index: 999;
-}
-
-.bottom-left {
-    align-items: center;
-    animation: moveRight .75s .75s;
-    animation-fill-mode: forwards;
-    display: flex;
-    position: fixed;
-    opacity: 0;
-    left: -35vw;
-    bottom: 1vh;
-    z-index: 999;
-}
-
-.bottom {
-    align-items: center;
-    animation: moveUp .75s .75s;
-    animation-fill-mode: forwards;
-    display: flex;
-    position: fixed;
-    opacity: 0;
-    right: 35vw;
-    bottom: -35vh;
-    z-index: 999;
-}
-
-.bottom-right {
-    align-items: center;
-    animation: moveLeft .75s .75s;
-    animation-fill-mode: forwards;
-    display: flex;
-    position: fixed;
-    opacity: 0;
-    right: -35vw;
-    bottom: 0vh;
-    z-index: 999;
-}
-
-.top-right {
-    align-items: center;
-    animation: moveLeft .75s .75s;
-    animation-fill-mode: forwards;
-    display: flex;
-    position: fixed;
-    opacity: 0;
-    right: -35vw;
-    top: 2vh;
-    z-index: 999;
-}
-
-.top-right {
-    align-items: center;
-    animation: moveLeft .75s .75s;
-    animation-fill-mode: forwards;
-    display: flex;
-    position: fixed;
-    opacity: 0;
-    right: -35vw;
-    top: 2vh;
-    z-index: 999;
-}
-
-.top-right-chat {
-    align-items: center;
-    animation: moveLeft .75s;
-    animation-fill-mode: forwards;
     display: flex;
     opacity: 0;
     position: fixed;
-    right: -35vw;
-    top: 2vh;
-    z-index: 999;
+    z-index: 997;
 }
 
 .eggy-picture {
-    height: 150px;
-    width: 150px;
+    height: 10vw;
+    width: 10vw;
 }
 
 .eggy-message {
     background-color: white;
-    border-radius: 25px 25px 25px 0px;
-    font-size: 14px;
-    padding: 10px;
-    margin-left: 10px;
-    max-width: 300px;
-    max-height: 100px;
+    border-radius: 2vw 2vw 2vw 0;
+    margin-left: 2vh;
+    max-height: 10vw;
+    max-width: 25vw;
+    padding: .75vw;
+    transition: all .5s;
+}
+
+.top {
+    animation: moveDown .75s .75s forwards;
+    right: 35vw;
+    top: -10vh;
+}
+
+.top-right {
+    animation: moveLeft .75s .75s forwards;
+    right: -35vw;
+    top: 2vh;
+}
+
+.top-right-chat {
+    animation: moveLeft .75s forwards;
+    right: -35vw;
+    top: 2vh;
+}
+
+.bottom {
+    animation: moveUp .75s .75s forwards;
+    bottom: -35vh;
+    right: 35vw;
+}
+
+.bottom-right {
+    animation: moveLeft .75s .75s forwards;
+    bottom: 0vh;
+    right: -35vw;
+}
+
+.bottom-left {
+    animation: moveRight .75s .75s forwards;
+    bottom: 1vh;
+    left: -35vw;
+}
+
+@media screen and (max-width: 900px){
+    .eggy-picture {
+        height: 12vw;
+        width: 12vw;
+    }
+    
+    .eggy-message {
+        font-size: 2vw;
+        max-height: 40vw;
+        padding: 1.5vw;
+    }
+} 
+
+@media screen and (min-width: 901px){
+    .eggy-picture {
+        height: 100px;
+        width: 100px;
+    }
+    
+    .eggy-message {
+        font-size: 16px;
+        max-height: 35vw;
+        padding: 10px;
+    }
 }
 
 @keyframes moveDown {
@@ -105,8 +91,8 @@
         opacity: 0%;
     }
     100% {
-        top: 2vh;
         opacity: 100%;
+        top: 2vh;
     }
 }
 
@@ -118,8 +104,8 @@
         opacity: 0%;
     }
     100% {
-        left: 1vw;
         opacity: 100%;
+        left: 1vw;
     }
 }
 
@@ -131,8 +117,8 @@
         opacity: 0%;
     }
     100% {
-        right: 1vw;
         opacity: 100%;
+        right: 1vw;
     }
 }
 

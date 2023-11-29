@@ -1,50 +1,49 @@
-.quiz-container {
-    align-items: center;
-    display: grid;
-    grid-template-columns: auto auto;
-    margin: auto 0px;
-    justify-content: center;
-    text-align: center;
-    height: 100vh;
-}
-
-.quiz-question {
-    animation: showQuestions .75s;
-    animation-fill-mode: forwards;
-    font-size: 70px;
-    font-family: eggFont;
-    margin-right: 15vw;
-    width: 45vw;
-}
-
 button {
     background-color: rgb(170, 170, 224);
     border: none;
     color: white;
     font-size: 30px;
-  }
+}
 
-.selection-container {
+#quiz-container {
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    height: 100vh;
+    justify-content: center;
+    margin: auto 0;
+    padding: 0;
+    text-align: center;
+}
+
+.quiz-question {
+    animation: showQuestionsX .75s forwards;
+    font-family: eggFont;
+    font-size: 5vw;
+    margin-right: 15vw;
+    width: 45vw;
+}
+
+.answer-container {
     align-items: center; 
-    animation: showAnswers .75s;
-    animation-fill-mode: forwards;
+    animation: showAnswersX .75s forwards;
     list-style: none; 
     margin-left: 15vw;
     vertical-align: middle;
     width: 40vw;
 }
 
-.selection-button {
+.answer-button {
     background-color: white;
+    border-radius: 1vw;
     color: black;
-    border-radius: 15px;
     font-family: subtitle;
-    margin: 5px;
-    padding: 15px 5px;
+    margin: .5vw;
+    padding: 1vw .75vw;
     width: 100%;
 }
 
-.selection-button:hover {
+.answer-button:hover {
     background-color: white;
     color: rgb(254, 207, 76);
 }
@@ -56,14 +55,14 @@ button {
     margin: auto;
     position: absolute;
     text-align: center;
-    width: 100%;
     top: 10%;
+    width: 100%;
 }
   
 #loading-container p {
     color: rgb(254, 207, 76);
     font-family: eggFont;
-    font-size: 55px;
+    font-size: 5vw;
 }
   
 #loading-bubbles {
@@ -72,7 +71,7 @@ button {
     text-align: center;
 }
 
-@keyframes showQuestions {
+@keyframes showQuestionsX {
     from {
         margin-right: 15vw;
     }
@@ -81,11 +80,44 @@ button {
     }
 }
 
-@keyframes showAnswers {
+@keyframes showAnswersX {
     from {
         margin-left: 15vw;
     }
     to {
         margin-left: 0;
+    }
+}
+
+@keyframes showAnswersY {
+    from {
+        margin-top: 100vw;
+    }
+    to {
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #quiz-container {
+        align-items: start;
+        grid-template-columns: auto;
+        grid-template-rows: 50vh 50vh;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .quiz-question {
+        align-self: stretch;
+        animation: none;
+        font-size: 10vw;
+        margin: auto;
+        width: 80vw;  
+    }
+
+    .answer-container {
+        animation: showAnswersY 1s forwards;
+        margin: 0 auto;
+        width: 80vw;
     }
 }

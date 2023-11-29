@@ -20,7 +20,7 @@ export const questions = [
     {question: "When's the last time you cleaned the device you're taking this quiz on?",
     answers: [{answer:"I use soap and water on it every day", value: 0}, {answer:"About everytime I brush my teeth, so maybe a couple weeks ago?", value: 1}, {answer:"Idk why dont you ask me something actually important", value: 2}, {answer:"Never. This device is nothing more than a petri dish", value: 3}],
     eggyResponse: "Ohhhh so that's why you look so greasy!"},
-    {question: "How about your microwave?",
+    {question: "What about your microwave?",
     answers: [{answer:"I don't need to clean something I don't have", value: 0}, {answer:"Once every couple weeks when I forget that tomato sauce is a low-grade explosive", value: 1}, {answer:"The micro waves kill any bacteria, so technically every time I use it", value: 2}, {answer:"Never, I replace my microwave every time I see so much as a splatter", value: 3}],
     eggyResponse: "A microwave sounds so nice and warm!"},
     {question: "Do you use q-tips inside your ear",

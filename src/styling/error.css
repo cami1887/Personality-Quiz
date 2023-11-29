@@ -4,13 +4,11 @@
 }
 
 .error-code {
-    font-size: 60px;
     font-family: subtitle;
-    /* width: 45vw; */
-    margin: 5vh auto;
+    font-size: 5vw;
+    margin: 8vh auto;
 }
 
 .easter-egg {
     width: 25vw;
-
 }

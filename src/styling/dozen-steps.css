@@ -1,10 +1,10 @@
 hr {
     border: 0;
-    box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
-    height: 12px;
+    box-shadow: inset 0 1vw 1vw -1vw rgba(0, 0, 0, 0.5);
+    height: 1vw;
     margin: 0;
     padding: 0;
-  }
+}
 
 .article {
     margin: 0;
@@ -17,19 +17,17 @@ hr {
     grid-template-columns: 1fr 1fr;
     height: 100vh;
     margin: 0;
-    vertical-align: middle;
+    width: 100vw;
     z-index: 0;
 }
 
 .article-title {
-    font-family: eggFont;
     color: black;
-    font-size: 130px;
-    height: 100vh;
-    margin: 25% 0 ;
+    font-family: eggFont;
+    font-size: 9vw;
+    margin: auto 0;
     text-align: center;
-    text-shadow: 40px -40px rgb(237, 211, 171);
-    vertical-align: middle;
+    text-shadow: 3vw -3vw rgb(237, 211, 171);
 }
 
 .article-picture {
@@ -40,6 +38,7 @@ hr {
 }
 
 .egg-carton-container {
+    font-size: 1.5vw;
     position: relative;
     text-align: center;
 }
@@ -50,13 +49,13 @@ hr {
 }
 
 .article-subtitle {
-    font-family: subtitle;
     background-color: rgb(255, 244, 214);
     border-radius: 40px 40px 40px 40px;
     box-shadow:  0px 12px 12px -12px rgba(0, 0, 0, 0.5);
-    font-size: 45px;
+    font-family: subtitle;
+    font-size: 4vw;
     margin: 5% auto;
-    padding: 70px;
+    padding: 7vw;
     text-align: center;
     vertical-align: middle;
     width: 75%;
@@ -64,6 +63,7 @@ hr {
 
 .article-subtitle span {
     color:rgb(243, 198, 74);
+    font-family: subtitle;
 }
 
 .blank {
@@ -80,13 +80,12 @@ hr {
     border-radius: 0px 25px 25px 0px;
     box-shadow: 1px 1px 5px #c9c9c9;
     font-family: subtitle;
-    font-size: 24px;
+    max-width: 20vw;
     opacity: 0;
     padding: 1%;
     position: absolute;
     transition: opacity 2000ms;
     visibility: hidden;
-    width: 300px;
     z-index: 3;
 }
 
@@ -170,38 +169,38 @@ hr {
 }
 
 #step-one {
-    font-size: 17px;
+    font-size: 1em;
     left: 12%;
     top: 7%;
 }
 
 #step-two {
-    font-size: 19px;
+    font-size: 1.1em;
     left: 9.8%;
     top: 11%;
 }
 
 #step-three {
-    font-size: 21px;
+    font-size: 1.25em;
     left: 8.7%;
     top: 17%;
 }
 
 #step-four {
-    font-size: 23px;
+    font-size: 1.35em;
     left: 2%;
     top: 24%;
     width: 350px;
 }
 
 #step-five {
-    font-size: 25px;
+    font-size: 1.45em;
     left: 2.5%;
     top: 34%;
 }
 
 #step-six {
-    font-size: 27px;
+    font-size: 1.6em;
     left: 2%;
     top: 45%;
     width: 270px;
@@ -209,42 +208,42 @@ hr {
 
 #step-seven {
     border-radius: 25px 0px 0px 25px;
-    font-size: 17px;
+    font-size: 1em;
     left: 63%;
     top: 8%;
 }
 
 #step-eight {
     border-radius: 25px 0px 0px 25px;
-    font-size: 19px;
+    font-size: 1.1em;
     left: 65.5%;
     top: 12%;
 }
 
 #step-nine {
     border-radius: 25px 0px 0px 25px;
-    font-size: 21px;
+    font-size: 1.25em;
     left: 67.5%;
     top: 17%;
 }
 
 #step-ten {
     border-radius: 25px 0px 0px 25px;
-    font-size: 23px;
+    font-size: 1.35em;
     left: 71%;
     top: 24%;
 }
 
 #step-eleven {
     border-radius: 25px 0px 0px 25px;
-    font-size: 25px;
+    font-size: 1.45em;
     left: 74%;
     top: 34%;   
 }
 
 #step-twelve {
     border-radius: 25px 0px 0px 25px;
-    font-size: 27px;
+    font-size: 1.6em;
     left: 76%;
     top: 45%;
     width: 290px;
@@ -362,22 +361,23 @@ hr {
     background-color: rgb(255, 244, 214);
     border-radius: 40px 40px 40px 40px;
     box-shadow:  0px 12px 12px -12px rgba(0, 0, 0, 0.5);
-    font-size: 45px;
     margin: 5% auto;
-    padding: 70px 70px 200px;
+    padding: 7vw 7vw 20vw;
     text-align: center;
     vertical-align: middle;
     width: 75%;
+    z-index: 996;
 }
 
 .community-description {
     font-family: eggFont;
-    font-size: 70px;
+    font-size: 5vw;
 }
 
 .button-container {
-    padding-bottom: 20px;
+    padding-bottom: 2vh;
     position: relative;
+    width: 100vw;
 }
 
 .community-button {
@@ -385,11 +385,13 @@ hr {
     border-radius: 100px;
     color: white;
     font-family: subtitle;
-    height: 140px;
-    left: 43%;
+    font-size: 2vw;
+    height: 8vw;
+    left: 31vw;
     position: absolute;
     text-align: center;
-    width: 140px;
+    top: 35%;
+    width: 8vw;
     z-index: 2;
 }
 
@@ -402,28 +404,29 @@ hr {
 .egg-white-three {
     background-color: rgb(255, 252, 250);
     border-radius: 60% 80% 60% 60%;
-    height: 120px;
-    left: 30%;
+    height: 8vw;
+    left: 23vw;
     position: absolute;
     top: 100%;
-    width: 450px;
+    width: 25vw;
     z-index: 1;
 }
 
 .last-break {
-    box-shadow: inset 0 -12px 12px -12px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 -1vw 1vw -1vw rgba(0, 0, 0, 0.5);
+    opacity: 0;
 }
 
 .reveal {
+    opacity: 0; 
     position: relative;
     transform: translateY(150px);
-    opacity: 0;
     transition: 2s all ease;
 }
 
 .last-reveal {
-    position: relative;
     opacity: 0;
+    position: relative;
     transition: 2s all ease;
 }
 
@@ -432,6 +435,33 @@ hr {
 }
 
 .reveal.active {
-    transform: translateY(0);
     opacity: 1;
+    transform: translateY(0);
+}
+
+
+@media screen and (max-width: 600px) {
+    .article {
+        margin: 0%;
+        overflow-x: hidden;
+        width: 100vw;
+    }
+
+    .article-header {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+    }
+    
+    .article-picture {
+        height: 50vh;
+    }
+
+    .step {
+        max-width: 11vh;
+        width: 100%;
+    }
+
+    #step-one, #step-two, #step-three, #step-four, #step-five, #step-six, #step-seven, #step-eight, #step-nine, #step-ten, #step-eleven, #step-twelve {
+        font-size: 3vw;
+    }
 }

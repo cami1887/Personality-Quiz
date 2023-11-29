@@ -1,25 +1,38 @@
 header {
     background-color: cornsilk;
-    border-radius: 0 0 15px 15px;
-    box-shadow: 0px 1px 10px 0px rgb(158, 158, 158);
-    position: fixed;
+    border-radius: 0 0 1.5vw 1.5vw;
+    box-shadow: 0 .2vw .5vw 0 rgb(158, 158, 158);
     margin: 0 auto;
+    position: fixed;
     width: 100%;
     z-index: 997;
 }
 
 header h1 {
-    text-align: center;
-     color: black;
+    color: black;
     font-family: eggFont;
-    font-size: 52px;
+    font-size: 8vh;
     margin: 0;
+    text-align: center;
 }
 
-.title-two {
-   color: rgb(255, 205, 68);
+input {
+    border: solid .25vh orange;
+    border-radius: 100px;
+    font-family: subtitle;
+    height: 5vh;
+    padding-left: 1vw;
+    width: 49%;
+}
+
+button {
+    background-color: transparent;
+}
+
+.title-span {
+    color: rgb(255, 205, 68);
     font-family: eggFont;
-    font-size: 52px;
+    font-size: 8vh;
 }
 
 .status-container {
@@ -27,31 +40,39 @@ header h1 {
     background-color: cornsilk;
     bottom: 0;
     display: flex;
-    height: 60px;
+    height: 8vh;
     justify-content: center; 
     position: fixed;
     width: 100%;
 }
 
-input {
-    border: solid 1px orange;
-    border-radius: 100px;
-    font-family: subtitle;
-    height: 35px;
-    padding-left: 10px;
-    width: 50%;
-}
-
-button {
-    background-color: transparent;
-}
-
 .status-container img {
-    height: 28px;
+    height: 4vh;
 }
 
 .emoji-picker {
-    margin-bottom: 371px;
+    bottom: 8vh;
+    position:fixed;
+    right: 24vh;
+    width: 30vh;
+}
+
+@media screen and (max-width: 600px) {
+    header h1 {
+        font-size: 8vw;
+    }
+    
+    .title-span {
+        font-size: 8vw;
+    }
+
+    .emoji-picker {
+        display: none;
+    }
+
+    .emoji-picker-icon {
+        display: none;
+    }
 }
 
 
