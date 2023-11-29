@@ -1,19 +1,15 @@
 # Personality Quiz
-This is a simple personality quiz website which functions to find out if you're a good person or not. It was made to showcase my newly acquired React skills.
 
-![2F92D944-911E-4624-83BE-BCD93A2F5CC1](https://github.com/cami1887/react-router-website/assets/116380828/94b97fb4-df8e-42f2-ad55-9148f330d3d8)
+This is a simple personality quiz website which evaluates your character. It was made to showcase my newly acquired React skills. Some elements of this app were implemented solely to simulate online use. This includes a pseudo-loading screen and simulated chat environment.
+
+<img width="800" alt="Screenshot 2023-11-28 at 4 59 03 PM" src="https://github.com/cami1887/react-router-website/assets/116380828/27373f9a-f53e-44a7-8bde-cafc82e01eb9">
 
 ## Technology Used
 - JavaScript
 - HTML
 - CSS
-- React
-
-## Website Features
-- Navigation menu
-- Quiz portion
-- Leaderboard (in progress)
-- Community page with ability to create and interact with posts (in progress)
+- React JS
+- NPM
 
 ## Getting Started with Create React App
 
