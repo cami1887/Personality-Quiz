@@ -8,8 +8,8 @@ This is a simple personality quiz website which evaluates your character. It was
 - JavaScript
 - HTML
 - CSS
-- React JS
-- NPM
+- React
+- Node
 
 ## Getting Started with Create React App
 
